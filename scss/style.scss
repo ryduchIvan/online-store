@@ -33,21 +33,20 @@ body {
 	background-color: #141414;
 }
 
-.header__container {
+.header__container {}
+
+.container {
 	max-width: 1276px;
 	padding-left: 30px;
 	padding-right: 30px;
 	margin: 0px auto;
 }
 
-.container {
-	height: 50px;
-}
-
 .header__row {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 25px;
+	align-items: center;
+	height: 70px;
 }
 
 .header__menu {}
@@ -76,6 +75,231 @@ body {
 	margin-left: 15px;
 }
 
+.white__line {
+	background-color: #ECF1F2;
+}
+
+.container__white {}
+
+.header__row__white {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 90px;
+}
+
+.white__items__one {
+	display: flex;
+}
+
+.white__logo {}
+
+.white__input {
+	margin-left: 50px;
+	background-color: #07070710;
+	width: 300px;
+	border-radius: 5px;
+	border: 1px solid #0404046e;
+	height: 35px;
+	background: url(../img/logo-header/lypa.svg) no-repeat;
+	background-position: 5% 50%;
+
+	&::placeholder {
+		padding-left: 32px;
+	}
+}
+
+.white__items__two {
+	display: flex;
+	align-items: center;
+}
+
+.white__location {
+	display: flex;
+}
+
+.location__icon {}
+
+.location__text {
+	margin-left: 8px;
+	font-size: 18px;
+	line-height: 1.2;
+	font-family: Semibold;
+}
+
+.white__contact {
+	font-family: Semibold;
+	color: black;
+	font-size: 18px;
+	line-height: 1.2;
+	margin-left: 45px;
+
+	span {
+		color: #E8AA31;
+	}
+}
+
+.white__heart {
+	margin-left: 25px;
+}
+
+.white__bag {
+	display: flex;
+	margin-left: 25px;
+}
+
+.bag__icon {}
+
+.bag__tex {
+	color: #141414;
+	font-size: 18px;
+	line-height: 1.2;
+	margin-left: 10px;
+
+	span {
+		color: #E8AA31;
+	}
+}
+
+.black__line {}
+
+.black__container {
+	padding-right: 100px;
+}
+
+.container {}
+
+.black__menu {}
+
+.black__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.black__link {
+	color: white;
+	font-size: 16px;
+	line-height: 1.2;
+	display: block;
+	padding-bottom: 30px;
+	padding-top: 30px;
+	position: relative;
+
+	&::before {
+		content: "";
+		border-bottom: 2px solid white;
+		height: 2px;
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+	}
+
+	&:hover {
+		color: #E8AA31;
+		transition: all 0.2s ease;
+
+		&::before {
+			border-bottom: 2px solid #E8AA31;
+		}
+	}
+}
+
+.cover {
+	background: url(../img/cover/cover.png) no-repeat;
+	background-size: 100% auto;
+}
+
+.cover__container {}
+
+.container {}
+
+.cover__box {}
+
+.cover__text {}
+
+.cover__title {
+	padding-top: 45px;
+	font-size: 32px;
+	color: white;
+	line-height: 1.27;
+	font-family: Bold;
+	max-width: 710px;
+
+	span {
+		font-size: 32px;
+		color: white;
+		line-height: 1.27;
+		font-family: Medium;
+	}
+}
+
+.cover__desc {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 20px;
+	line-height: 1.5;
+	letter-spacing: 3%;
+	max-width: 840px;
+	margin-top: 30px;
+
+	span {
+		font-family: Bold;
+	}
+}
+
+.cover__buttons {}
+
+.cover__button {
+	margin-top: 40px;
+	padding: 15px 52px;
+	background-color: #E8AA31;
+	font-size: 20px;
+	line-height: 2.3;
+	border-radius: 3px;
+	max-width: 228px;
+	box-shadow: 0px 0px 20px 4px rgba(232, 170, 49, 0.43);
+	display: block;
+
+	span {
+		color: #ffffff;
+	}
+}
+
+.cover__row {
+	display: flex;
+	padding-top: 80px;
+	padding-bottom: 30px;
+	justify-content: space-between;
+}
+
+.cover__row__item {
+	text-align: center;
+}
+
+.cover__row__img {
+	display: flex;
+	justify-content: center;
+}
+
+.cover__row__img__third {
+	margin-top: -17px;
+}
+
+.cover__row__img__first {
+	margin-top: -5px;
+}
+
+.cover__row__img__last {
+	margin-top: -5px;
+}
+
+.cover__row__text {
+	color: white;
+	line-height: 2;
+	max-width: 250px;
+}
 
 .main {
 	flex: 1 1 auto;
