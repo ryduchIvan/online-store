@@ -18,3 +18,67 @@
 body {
 	font-family: Medium;
 }
+
+/*-PREPERATION-END---------------------------*/
+
+/*-START---------------------------*/
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.header {
+	background-color: #141414;
+}
+
+.header__container {
+	max-width: 1276px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin: 0px auto;
+}
+
+.container {
+	height: 50px;
+}
+
+.header__row {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 25px;
+}
+
+.header__menu {}
+
+.header__list {
+	width: 509px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header__link {
+	color: white;
+	line-height: 1.2;
+}
+
+.header__account {
+	display: flex;
+}
+
+.header__account__logo {}
+
+.header__account__text {
+	font-size: 18px;
+	color: white;
+	line-height: 1.2;
+	margin-left: 15px;
+}
+
+
+.main {
+	flex: 1 1 auto;
+}
+
+.footer {}

@@ -17,3 +17,75 @@
 body {
   font-family: Medium;
 }
+
+/*-PREPERATION-END---------------------------*/
+/*-START---------------------------*/
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #141414;
+}
+
+.header__container {
+  max-width: 1276px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0px auto;
+}
+
+.container {
+  height: 50px;
+}
+
+.header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 25px;
+}
+
+.header__list {
+  width: 509px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__link {
+  color: white;
+  line-height: 1.2;
+}
+
+.header__account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__account__text {
+  font-size: 18px;
+  color: white;
+  line-height: 1.2;
+  margin-left: 15px;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
