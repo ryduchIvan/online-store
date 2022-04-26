@@ -1,3 +1,19 @@
+/*-PREPERATION----------------------------*/
+@font-face {
+  font-family: Bold;
+  src: url(../fonts/Montserrat-Bold.woff2);
+}
+
+@font-face {
+  font-family: Semibold;
+  src: url(../fonts/Montserrat-SemiBold.woff2);
+}
+
+@font-face {
+  font-family: Medium;
+  src: url(../fonts/Montserrat-Medium.woff2);
+}
+
 body {
-  background-color: black;
+  font-family: Medium;
 }
