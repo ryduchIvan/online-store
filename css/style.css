@@ -213,17 +213,21 @@ body {
   padding-bottom: 30px;
   padding-top: 30px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .black__link::before {
   content: "";
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #E8AA31;
   height: 2px;
-  display: block;
+  display: inline;
   position: absolute;
   bottom: 0px;
   left: 0px;
-  width: 100%;
+  width: 0%;
+  text-align: center;
 }
 
 .black__link:hover {
@@ -233,7 +237,9 @@ body {
 }
 
 .black__link:hover::before {
-  border-bottom: 2px solid #E8AA31;
+  width: 100%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .cover {
@@ -278,8 +284,8 @@ body {
   line-height: 2.3;
   border-radius: 3px;
   max-width: 228px;
-  -webkit-box-shadow: 0px 0px 20px 4px rgba(232, 170, 49, 0.43);
-          box-shadow: 0px 0px 20px 4px rgba(232, 170, 49, 0.43);
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(232, 170, 49, 0.43);
+          box-shadow: 0px 0px 10px 4px rgba(232, 170, 49, 0.43);
   display: block;
 }
 
