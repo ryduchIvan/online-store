@@ -22,11 +22,36 @@
 .catalog__item {
 	width: 385px;
 	height: 195px;
-	background: url(../img/catalog/catalog2.png) no-repeat center;
+	background: url(../img/catalog/catolog1.png) no-repeat center;
 	background-size: 100% auto;
 	background-color: white;
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 	padding: 28px 0px;
+}
+
+.catalog__item__one {
+	background: url(../img/catalog/catalog2.png) no-repeat center;
+	background-size: 100% auto;
+}
+
+.catalog__item__two {
+	background: url(../img/catalog/catalog3.png) no-repeat center;
+	background-size: 110% auto;
+}
+
+.catalog__item__three {
+	background: url(../img/catalog/catalog4.png) no-repeat center;
+	background-size: 110% auto;
+}
+
+.catalog__item__fhor {
+	background: url(../img/catalog/catalog5.png) no-repeat;
+	background-size: 100% auto;
+}
+
+.catalog__item__fight {
+	background: url(../img/catalog/catalog6.png) no-repeat center;
+	background-size: 110% auto;
 }
 
 .catalog__title {
