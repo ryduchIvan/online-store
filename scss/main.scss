@@ -122,4 +122,411 @@
 	}
 }
 
-/*--FIRST-SECTION-ENDs----------------------*/
+/*--FIRST-SECTION-END----------------------*/
+
+/*--SLIDER---------------------*/
+
+.slider__stock {
+	margin-top: 120px;
+}
+
+.stock__title {
+	font-family: 30px;
+	line-height: 1.6;
+	letter-spacing: 5%;
+	color: #141414;
+	font-family: Bold;
+}
+
+.stock__box {
+	width: 100%;
+	overflow: hidden;
+}
+
+.stock__line {
+	display: flex;
+	transition: all 0.5s ease;
+}
+
+.slider__items {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+.stock__item {
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+
+	&:not(:first-child) {
+		margin-left: 20px;
+	}
+}
+
+.stock__img {
+	max-width: 250px;
+	height: 240px;
+
+	img {
+		max-width: 250px;
+		height: 240px;
+	}
+}
+
+.knife__title {
+	font-size: 20px;
+	line-height: 1.4;
+	font-family: Semibold;
+	color: #141414;
+	margin-top: 19px;
+}
+
+.stock__row__one {
+	display: flex;
+	justify-content: space-between;
+}
+
+.knife__size {
+	font-size: 16px;
+	line-height: 2;
+	color: #ABABAB;
+	font-family: Semibold;
+}
+
+.knife__options {
+	font-size: 16px;
+	line-height: 2;
+	color: #ABABAB;
+	font-family: Semibold;
+}
+
+.stock__row__two {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 15px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid #14141471;
+}
+
+.knife__star {
+	display: flex;
+	justify-content: space-between;
+	width: 150px;
+}
+
+.knife__reviews {}
+
+.stock__row__three {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.knife__price {
+	font-size: 20px;
+	line-height: 1.4;
+	font-family: Semibold;
+	color: #141414;
+}
+
+.knife__bag {
+	display: flex;
+	justify-content: space-between;
+}
+
+.comprasion {
+	margin-right: 8px;
+}
+
+.heart_white {}
+
+.knife_button {
+	background-color: #E8AA31;
+	padding: 4px;
+	text-align: center;
+	border-radius: 3px;
+	margin-top: 28px;
+
+	span {
+		font-size: 18px;
+		line-height: 2.5;
+		color: white;
+		position: relative;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 20px;
+			height: 17px;
+			background: url(../img/icon/bag-button.svg);
+			position: absolute;
+			top: 3px;
+			left: 110%;
+		}
+	}
+}
+
+.knife_button_link {}
+
+
+.slider__next {}
+
+.slider__prev {}
+
+.slide__container {
+	max-width: 300px;
+	margin: 0px auto;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+.slide {
+	width: 40px;
+	height: 6px;
+	border-radius: 2px;
+	background-color: #898989;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.3s ease 0s;
+
+	&::before {
+		width: 12px;
+		height: 12px;
+		content: "";
+		background-color: #E8AA31;
+		border-radius: 50%;
+		display: block;
+		position: absolute;
+		bottom: -3px;
+		left: 0px;
+		display: none;
+	}
+}
+
+.new-style {
+	background: #E8AA31;
+	transition: all 0.3s ease 0s;
+
+	&::before {
+		display: block;
+	}
+}
+
+.forest {
+	background: url(../img/cover/forest.png) no-repeat center;
+	background-size: 100% auto;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.forest__container {}
+
+.container {}
+
+.forest__row {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.forest__text {}
+
+.forest__title {
+	margin-top: 18px;
+	font-size: 30px;
+	height: 1.3;
+	font-family: Bold;
+	letter-spacing: 5%;
+	color: white;
+}
+
+.forest__desc {
+	width: 336px;
+	font-size: 18px;
+	line-height: 1.5;
+	color: white;
+	opacity: 70%;
+	margin-top: 20px;
+}
+
+.forest__link {
+	font-size: 20px;
+	line-height: 2.2;
+	color: #E8AA31;
+	font-family: Semibold;
+	margin-top: 90px;
+}
+
+.forest__box {
+	overflow: hidden;
+	padding-bottom: 20px;
+}
+
+.forest__line {
+	display: flex;
+	transition: all 0.5s ease;
+}
+
+.forest__items {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	margin-left: 20px;
+}
+
+.forest__item {
+	background-color: white;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+
+	&:not(:first-child) {
+		margin-left: 20px;
+	}
+}
+
+.forest__img {
+	max-width: 190px;
+	height: 180px;
+
+	img {
+		max-width: 190px;
+		height: 180px;
+	}
+}
+
+.forest__row__one {
+	display: flex;
+	justify-content: space-between;
+}
+
+.forest__size {
+	font-size: 16px;
+	line-height: 2;
+	color: #ABABAB;
+	font-family: Semibold;
+}
+
+.forest__options {
+	font-size: 16px;
+	line-height: 2;
+	color: #ABABAB;
+	font-family: Semibold;
+}
+
+.forest__row__two {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 15px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid #14141471;
+}
+
+.forest__star {
+	display: flex;
+	justify-content: space-between;
+	width: 150px;
+}
+
+.forest__reviews {}
+
+.forest__row__three {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.forest__price {
+	font-size: 20px;
+	line-height: 1.4;
+	font-family: Semibold;
+	color: #141414;
+}
+
+.forest__bag {
+	display: flex;
+	justify-content: space-between;
+}
+
+.comprasion {
+	margin-right: 8px;
+}
+
+.heart_white {}
+
+.forest_button {
+	background-color: #E8AA31;
+	padding: 4px;
+	text-align: center;
+	border-radius: 3px;
+	margin-top: 18px;
+
+	span {
+		font-size: 18px;
+		line-height: 2.5;
+		color: white;
+		position: relative;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 20px;
+			height: 17px;
+			background: url(../img/icon/bag-button.svg);
+			position: absolute;
+			top: 3px;
+			left: 110%;
+		}
+	}
+}
+
+.forest_button_link {}
+
+.forest__buttons {
+	max-width: 300px;
+	margin: 0px auto;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+
+.forest__button {
+	width: 40px;
+	height: 6px;
+	border-radius: 2px;
+	background-color: #898989;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.3s ease 0s;
+
+	&::before {
+		width: 12px;
+		height: 12px;
+		content: "";
+		background-color: #E8AA31;
+		border-radius: 50%;
+		display: block;
+		position: absolute;
+		bottom: -3px;
+		left: 0px;
+		display: none;
+	}
+}
+
+.new-style-forest {
+	background: #E8AA31;
+	transition: all 0.3s ease 0s;
+
+	&::before {
+		display: block;
+	}
+}
+
+.forest__button_one {}
+
+.forest__button_two {}
+
+.forest__button_three {}
+
+.forest__button_fhor {}
