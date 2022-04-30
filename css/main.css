@@ -124,9 +124,8 @@
 }
 
 .stock__title {
-  font-family: 30px;
+  font-size: 30px;
   line-height: 1.6;
-  letter-spacing: 5%;
   color: #141414;
   font-family: Bold;
 }
