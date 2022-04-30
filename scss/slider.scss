@@ -124,7 +124,7 @@
 
 /*--FIRST-SECTION-END----------------------*/
 
-/*--SLIDER---------------------*/
+/*--SECTOND-SECTION--------------------*/
 
 .slider__stock {
 	margin-top: 120px;
@@ -133,8 +133,31 @@
 .stock__title {
 	font-size: 30px;
 	line-height: 1.6;
+	letter-spacing: 5%;
 	color: #141414;
 	font-family: Bold;
+	display: flex;
+	justify-content: space-between;
+}
+
+.stock__view__all {
+	font-size: 18px;
+	line-height: 2;
+	font-family: Semibold;
+	color: #1414146e;
+	position: relative;
+	margin-right: 20px;
+
+	&::after {
+		content: "";
+		display: block;
+		width: 9.58px;
+		height: 15.8px;
+		background: url(../img/icon/gold-arrow.svg) no-repeat center;
+		position: absolute;
+		top: 20%;
+		left: 110%;
+	}
 }
 
 .stock__box {
@@ -313,6 +336,9 @@
 	}
 }
 
+/*--SECTION-TWO-END------------------*/
+
+/*--SECTION-THIRD-----------------*/
 .forest {
 	background: url(../img/cover/forest.png) no-repeat center;
 	background-size: 100% auto;
@@ -320,7 +346,9 @@
 	padding-bottom: 30px;
 }
 
-.forest__container {}
+.forest__container {
+	padding: 0px;
+}
 
 .container {}
 
@@ -332,13 +360,21 @@
 
 .forest__text {}
 
-.forest__title {
-	margin-top: 18px;
+.title__forest {
+	margin-top: 10px;
 	font-size: 30px;
 	height: 1.3;
 	font-family: Bold;
-	letter-spacing: 5%;
 	color: white;
+}
+
+.forest__title {
+	margin-top: 10px;
+	font-size: 22px;
+	height: 1.3;
+	font-family: Semibold;
+	letter-spacing: 5%;
+	color: black;
 }
 
 .forest__desc {
@@ -356,11 +392,26 @@
 	color: #E8AA31;
 	font-family: Semibold;
 	margin-top: 90px;
+	position: relative;
+	max-width: 220px;
+
+	&::after {
+		content: "";
+		display: block;
+		width: 9px;
+		height: 17px;
+		background: url(../img/icon/gold-arrow.svg) no-repeat center;
+		position: absolute;
+		top: 33%;
+		left: 100%;
+	}
 }
 
 .forest__box {
 	overflow: hidden;
 	padding-bottom: 20px;
+	margin-top: 50px;
+	max-width: 850px;
 }
 
 .forest__line {
@@ -372,26 +423,29 @@
 	display: flex;
 	width: 100%;
 	height: 100%;
-	margin-left: 20px;
+	margin-left: 10px;
+	justify-content: flex-end;
+
 }
 
 .forest__item {
 	background-color: white;
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-	padding: 20px;
+	padding: 10px 20px;
 
 	&:not(:first-child) {
-		margin-left: 20px;
+		margin-left: 10px;
 	}
 }
 
 .forest__img {
 	max-width: 190px;
-	height: 180px;
+	height: 140px;
+	margin: 0px auto;
 
 	img {
 		max-width: 190px;
-		height: 180px;
+		height: 140px;
 	}
 }
 
@@ -401,14 +455,14 @@
 }
 
 .forest__size {
-	font-size: 16px;
+	font-size: 12px;
 	line-height: 2;
 	color: #ABABAB;
 	font-family: Semibold;
 }
 
 .forest__options {
-	font-size: 16px;
+	font-size: 12px;
 	line-height: 2;
 	color: #ABABAB;
 	font-family: Semibold;
@@ -417,9 +471,10 @@
 .forest__row__two {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 15px;
-	padding-bottom: 25px;
+	margin-top: 5px;
+	padding-bottom: 10px;
 	border-bottom: 1px solid #14141471;
+	font-size: 12px;
 }
 
 .forest__star {
@@ -462,7 +517,7 @@
 	margin-top: 18px;
 
 	span {
-		font-size: 18px;
+		font-size: 14px;
 		line-height: 2.5;
 		color: white;
 		position: relative;
@@ -529,3 +584,88 @@
 .forest__button_three {}
 
 .forest__button_fhor {}
+
+/*--SECTION-THIRD-END----------------*/
+
+/*--SECTION-FOUR----------------*/
+.hite {}
+
+.hite__container {
+	margin-top: 120px;
+}
+
+.hite__box {
+	width: 100%;
+	overflow: hidden;
+}
+
+.hite__line {
+	display: flex;
+	transition: all 0.5s ease;
+}
+
+.hite__items {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+.hite__item {
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+
+	&:not(:first-child) {
+		margin-left: 20px;
+	}
+}
+
+.hint__container {
+	max-width: 300px;
+	margin: 0px auto;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+.hite__slide {
+	width: 40px;
+	height: 6px;
+	border-radius: 2px;
+	background-color: #898989;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.3s ease 0s;
+
+	&::before {
+		width: 12px;
+		height: 12px;
+		content: "";
+		background-color: #E8AA31;
+		border-radius: 50%;
+		display: block;
+		position: absolute;
+		bottom: -3px;
+		left: 0px;
+		display: none;
+	}
+}
+
+.new-style-hite {
+	background: #E8AA31;
+	transition: all 0.3s ease 0s;
+
+	&::before {
+		display: block;
+	}
+}
+
+.hite_slide_one {}
+
+.hite_slide_two {}
+
+.hite_slide_three {}
+
+.hite_slide_four {}
+
+.hite_slide_fight {}

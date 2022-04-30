@@ -1,0 +1,75 @@
+.lamp {}
+
+.lamp__container {
+	margin-top: 80px;
+}
+
+.container {}
+
+.lamp__row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.lamp__item {
+	background: url(../img/lamp/lamp01.png) no-repeat center;
+	background-size: 100%;
+	background-color: #FEFEFE;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	flex: 0 1 48%;
+}
+
+.lamp__item__two {
+	background: url(../img/lamp/lamp02.png) no-repeat center;
+	background-size: 100%;
+	background-color: #FEFEFE;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+}
+
+.lamp__title {
+	margin: 0px;
+	padding: 0px;
+	max-width: 210px;
+}
+
+.catalog__title {}
+
+.lamp__text {
+	margin-top: 25px;
+	max-width: 250px;
+}
+
+.lamp__button {
+	background-color: #E8AA31;
+	display: block;
+	max-width: 200px;
+	text-align: center;
+	padding: 10px 0px;
+	border-radius: 3px;
+	box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.43);
+	margin-top: 20px;
+
+	span {
+		color: white;
+		font-family: Semibold;
+	}
+}
+
+.lamp__product {}
+
+.lamp__container {}
+
+.container {}
+
+.lamp__product__row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.lamp__product__item {
+	flex: 0 1 23%;
+	padding: 10px 15px;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}

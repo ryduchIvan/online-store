@@ -92,11 +92,11 @@ let widthForest;
 
 function initForest() {
 	widthForest = forestBox.offsetWidth;
-	forestItems.forEach(item => {
-		item.style.width = widthForest + 'px';
+	forestItem.forEach(item => {
+		item.style.width = widthForest / 3.1 + 'px';
 		item.style.height = 'auto';
 	})
-	forestLine.style.width = widthForest * forestItems.length + 'px';
+	forestLine.style.width = widthForest / 3.2 * forestItem.length + 'px';
 }
 initForest();
 forestButtonOne.addEventListener(`click`, function () {
@@ -132,6 +132,80 @@ forestButtonFhor.addEventListener(`click`, function () {
 	rollForestSlider()
 })
 function rollForestSlider() {
-	forestLine.style.transform = 'translate(-' + offset * widthForest / 3 + 'px)';
+	forestLine.style.transform = 'translate(-' + offset * widthForest / 2.95 + 'px)';
 
+}
+
+
+
+const hiteBox = document.querySelector(`.hite__box`);
+const hiteLine = document.querySelector(`.hite__line`);
+const hiteItems = document.querySelectorAll(`.hite__items`);
+const hiteItem = document.querySelectorAll(`.hite__item`);
+const hiteOne = document.querySelector(`.hite_slide_one`);
+const hiteTwo = document.querySelector(`.hite_slide_two`);
+const hiteThree = document.querySelector(`.hite_slide_three`);
+const hiteFour = document.querySelector(`.hite_slide_four`);
+const hiteFight = document.querySelector(`.hite_slide_fight`);
+const hiteSlide = document.querySelector(`.hite__slide`);
+let thirdWidth;
+let scrollHint = 0;
+
+function hite() {
+	thirdWidth = hiteBox.offsetWidth;
+	hiteItem.forEach(item => {
+		item.style.width = width / 4.25 + 'px';
+		item.style.height = `auto`;
+	})
+	hiteLine.style.width = thirdWidth / 4.25 * hiteItem.length + 'px';
+	hiteSlider()
+}
+hite();
+hiteOne.addEventListener(`click`, function () {
+	hiteOne.classList.add(`new-style-hite`);
+	hiteTwo.classList.remove(`new-style-hite`);
+	hiteThree.classList.remove(`new-style-hite`);
+	hiteFour.classList.remove(`new-style-hite`);
+	hiteFight.classList.remove(`new-style-hite`);
+	scrollHint = 0;
+	hiteSlider()
+})
+hiteTwo.addEventListener(`click`, function () {
+	hiteTwo.classList.add(`new-style-hite`);
+	hiteOne.classList.remove(`new-style-hite`);
+	hiteThree.classList.remove(`new-style-hite`);
+	hiteFour.classList.remove(`new-style-hite`);
+	hiteFight.classList.remove(`new-style-hite`);
+	scrollHint = 1;
+	hiteSlider()
+})
+hiteThree.addEventListener(`click`, function () {
+	hiteThree.classList.add(`new-style-hite`);
+	hiteTwo.classList.remove(`new-style-hite`);
+	hiteOne.classList.remove(`new-style-hite`);
+	hiteFour.classList.remove(`new-style-hite`);
+	hiteFight.classList.remove(`new-style-hite`);
+	scrollHint = 2;
+	hiteSlider()
+})
+hiteFour.addEventListener(`click`, function () {
+	hiteFour.classList.add(`new-style-hite`);
+	hiteTwo.classList.remove(`new-style-hite`);
+	hiteThree.classList.remove(`new-style-hite`);
+	hiteOne.classList.remove(`new-style-hite`);
+	hiteFight.classList.remove(`new-style-hite`);
+	scrollHint = 3;
+	hiteSlider()
+})
+hiteFight.addEventListener(`click`, function () {
+	hiteFight.classList.add(`new-style-hite`);
+	hiteTwo.classList.remove(`new-style-hite`);
+	hiteThree.classList.remove(`new-style-hite`);
+	hiteFour.classList.remove(`new-style-hite`);
+	hiteOne.classList.remove(`new-style-hite`);
+	scrollHint = 4;
+	hiteSlider()
+})
+function hiteSlider() {
+	hiteLine.style.transform = 'translate(-' + scrollHint * thirdWidth / 4 + 'px)';
 }
