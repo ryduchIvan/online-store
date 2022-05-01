@@ -12,6 +12,12 @@
 	<link rel="stylesheet" href="../css/article.css">
 	<link rel="stylesheet" href="../css/lamp.css">
 	<link rel="stylesheet" href="../css/footer.css">
+	<link rel="stylesheet" href="../css/hover.css">
+	<link rel="stylesheet" href="../css/adaptive-header.css">
+	<link rel="stylesheet" href="../css/adaptive-catalog.css">
+	<link rel="stylesheet" href="../css/adaptive-article.css">
+	<link rel="stylesheet" href="../css/adaptive-footer.css">
+	<link rel="stylesheet" href="../css/burger.css">
 </head>
 
 <body>
@@ -19,6 +25,23 @@
 		<header class="header">
 			<div class="header__container container">
 				<div class="header__row">
+					<div class="header__hidden__menu">
+						<div class="header__hidden__menu__item">
+							<img src="../img/logo-header/call-header.svg" alt="">
+						</div>
+						<div class="header__hidden__menu__item">
+							<img src="../img/logo-header/logo-people.svg" alt="">
+						</div>
+						<div class="header__hidden__menu__item">
+							<img src="../img/logo-header/white-heart.svg" alt="">
+						</div>
+						<div class="header__hidden__menu__item">
+							<img src="../img/logo-header/white-bag.svg" alt="">
+						</div>
+						<div class="burger__menu">
+							<span></span>
+						</div>
+					</div>
 					<nav class="header__menu">
 						<ul class="header__list">
 							<li><a href="" class="header__link">О нас</a></li>
@@ -49,10 +72,11 @@
 								<div class="location__icon">
 									<img src="../img/logo-header/location.svg" alt="">
 								</div>
-								<div class="location__text">Киев</div>
+								<a class="location__text" href="https://goo.gl/maps/Dkn6to5eLvyiL3Zr9"
+									target="_blank">Киев</a>
 							</div>
 							<div class="white__contact">
-								<p>+380 66 477 15 44 <br> <span>Заказать звонок</span></p>
+								<p>+380 66 477 15 44 <br> <a>Заказать звонок</a></p>
 							</div>
 							<div class="white__heart">
 								<img src="../img/logo-header/heart.svg" alt="">
@@ -62,7 +86,7 @@
 									<img src="../img/logo-header/bag.svg" alt="">
 								</div>
 								<div class="bag__tex">
-									<p>0 грн. <br> <span>Оформить Заказать</span></p>
+									<p>0 грн. <br> <a>Оформить Заказать</a></p>
 								</div>
 							</div>
 						</div>
@@ -73,13 +97,80 @@
 				<div class="black__container container">
 					<nav class="black__menu">
 						<ul class="black__row">
-							<li><a href="" class="black__link">Каталог ножей</a></li>
+							<li><a href="" class="black__link  black__link__one">Каталог ножей</a></li>
 							<li><a href="" class="black__link">Клинковое оружие</a></li>
 							<li><a href="" class="black__link">Сувенирные изделия</a></li>
 							<li><a href="" class="black__link">Фонари ARMYTEK</a></li>
 							<li><a href="" class="black__link">Сопуствующие товары</a></li>
 						</ul>
 					</nav>
+				</div>
+				<div class="hidden__menu">
+					<div class="hidden__container container">
+						<div class="hidden__row__title">
+							<div class="hidden__title">Категория ножей</div>
+							<div class="hidden__title">Производство ножей</div>
+							<div class="hidden__title">Ножи по маркам стали</div>
+							<div class="hidden__title">Заточка и полировка ножей</div>
+							<div class="hidden__title">Ножевая мастерская</div>
+						</div>
+						<div class="hidden__row__list">
+							<ul class="hidden__list">
+								<li><a href="" class="hidden__link">Разделочные ножи</a></li>
+								<li><a href="" class="hidden__link">Туристические ножи</a></li>
+								<li><a href="" class="hidden__link">Ножи охотничьи</a></li>
+								<li><a href="" class="hidden__link">Булатные ножи</a></li>
+								<li><a href="" class="hidden__link">Ножи из дамаска</a></li>
+								<li><a href="" class="hidden__link">Тактического <br> назначения</a></li>
+								<li><a href="" class="hidden__link">Метательные ножи</a></li>
+								<li><a href="" class="hidden__link">Мачете и кукри</a></li>
+								<li><a href="" class="hidden__link">Ножи кухонные</a></li>
+							</ul>
+							<ul class="hidden__list hidden__list__two">
+								<li><a href="" class="hidden__link">Ножи АИР</a></li>
+								<li><a href="" class="hidden__link">Ножи ЗИК</a></li>
+								<li><a href="" class="hidden__link">Ножи ЗЗОСС</a></li>
+								<li><a href="" class="hidden__link">Ножи РОСоружие</a></li>
+								<li><a href="" class="hidden__link">Ножи Оружейник</a></li>
+								<li><a href="" class="hidden__link">Булат Сергея Баранова</a></li>
+								<li><a href="" class="hidden__link">Булат Андрея Умерова</a></li>
+								<li><a href="" class="hidden__link">Ножи Стиль-М</a></li>
+								<li><a href="" class="hidden__link">Оружейная компания</a></li>
+							</ul>
+							<ul class="hidden__list hidden__list__three">
+								<li><a href="" class="hidden__link">Ножи из стали 40х102С2М</a></li>
+								<li><a href="" class="hidden__link">Ножи из стали 95х18</a></li>
+								<li><a href="" class="hidden__link">Ножи из стали 100х13м</a></li>
+								<li><a href="" class="hidden__link">Ножи из стали 110х18м-ШД</a></li>
+								<li><a href="" class="hidden__link">Ножи из стали ЭИ-107 ТЦ</a></li>
+								<li><a href="" class="hidden__link">Ножи из стали 50х14МФ</a></li>
+								<li><a href="" class="hidden__link">Ножи из стали 50х14МФ</a></li>
+								<li><a href="" class="hidden__link">Ножи из стали К340</a></li>
+								<li><a href="" class="hidden__link">Ножи из стали M390</a></li>
+								<li><a href="" class="hidden__link">Ножи из стали ЭП-766</a></li>
+							</ul>
+							<ul class="hidden__list hidden__list__four">
+								<li><a href="" class="hidden__link">Паста ГОИ</a></li>
+								<li><a href="" class="hidden__link">Алмазная паста</a></li>
+								<li><a href="" class="hidden__link">Бруски и камни для заточки</a></li>
+								<li><a href="" class="hidden__link">Заточные системы</a></li>
+							</ul>
+							<ul class="hidden__list hidden__list__fight">
+								<li><a href="" class="hidden__link">Ножевые клинки</a></li>
+								<li><a href="" class="hidden__link">Заготовки для ножей</a></li>
+								<li><a href="" class="hidden__link">Литье для ножей</a></li>
+								<li><a href="" class="hidden__link">Материалы для рукоятей</a></li>
+								<li><a href="" class="hidden__link">Уход за рукоятиями ножей</a></li>
+							</ul>
+						</div>
+						<div class="hidden__row__viewall">
+							<div class="viewall__link">Смотреть все</div>
+							<div class="viewall__link">Смотреть все</div>
+							<div class="viewall__link">Смотреть все</div>
+							<div class="viewall__link viewall__link__four">Смотреть все</div>
+							<div class="viewall__link viewall__link__fight">Смотреть все</div>
+						</div>
+					</div>
 				</div>
 			</section>
 			<section class="cover">
@@ -911,7 +1002,7 @@
 					</div>
 				</div>
 			</section>
-			<article>
+			<article class="article">
 				<div class="article__container container">
 					<div class="article__title">
 						Наши статьи
@@ -922,7 +1013,7 @@
 								<img src="../img/article/aritcle01.jpg" alt="">
 							</div>
 							<div class="article__text">
-								<div class="article__desc">Все о ножах: как правильно выбрать</div>
+								<a class="article__desc">Все о ножах: как правильно выбрать</a>
 								<div class="article__data">24.07.2019</div>
 							</div>
 						</div>
@@ -931,7 +1022,7 @@
 								<img src="../img/article/article02.jpg" alt="">
 							</div>
 							<div class="article__text">
-								<div class="article__desc">Как правильно выбрать фонарь</div>
+								<a class="article__desc">Как правильно выбрать фонарь</a>
 								<div class="article__data">24.07.2019</div>
 							</div>
 						</div>
@@ -940,7 +1031,7 @@
 								<img src="../img/article/article03.jpg" alt="">
 							</div>
 							<div class="article__text">
-								<div class="article__desc">Кухонные ножи для хозяек</div>
+								<a class="article__desc">Кухонные ножи для хозяек</a>
 								<div class="article__data">24.07.2019</div>
 							</div>
 						</div>
@@ -960,14 +1051,42 @@
 				<div class="lamp__container container">
 					<div class="lamp__row">
 						<div class="lamp__item">
-							<div class="catalog__title lamp__title">Тактические фонари</div>
-							<div class="lamp__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-							<div class="lamp__button"> <span>Подробнее</span></div>
+							<div class="lamp__box">
+								<div class="catalog__title lamp__title">Тактические фонари</div>
+								<div class="lamp__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+								<a class="lamp__button"> <span>Подробнее</span></a>
+							</div>
+							<div class="lamp__img"><img src="../img/lamp/lamp01.png" alt=""></div>
+							<div class="lamp__img__adp"></div>
+						</div>
+						<div class="hidden__lamp__item">
+							<div class="hidden__lamp__text">
+								<div class="hidden__lamp__title">Тактические фонари</div>
+								<div class=" hidden__lamp__desc">Lorem ipsum dolor sit amet consectetur,
+									adipisicing elit.</div>
+							</div>
+							<a class=" lamp__button__hidden">
+								<span>Подробнее</span>
+							</a>
 						</div>
 						<div class="lamp__item lamp__item__two">
-							<div class="catalog__title lamp__title">Тактические фонари</div>
-							<div class="lamp__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-							<a class="lamp__button"><span>Подробнее</span></a>
+							<div class="lamp__box">
+								<div class="catalog__title lamp__title">Тактические фонари</div>
+								<div class="lamp__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+								<a class="lamp__button"><span>Подробнее</span></a>
+							</div>
+							<div class="lamp__img"><img src="../img/lamp/lamp02.png" alt=""></div>
+							<div class="lamp__img__adp lamp__img__adp__two"></div>
+						</div>
+						<div class="hidden__lamp__item hidden__lamp__item__two">
+							<div class="hidden__lamp__text">
+								<div class="hidden__lamp__title">Тактические фонари</div>
+								<div class=" hidden__lamp__desc">Lorem ipsum dolor sit amet consectetur,
+									adipisicing elit.</div>
+							</div>
+							<a class="lamp__button__hidden">
+								<span>Подробнее</span>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -1166,7 +1285,9 @@
 								<li><a href="" class="footer__link link__footer__icon">+380 66 477 15 44</a></li>
 								<li><a href="" class="footer__link link__footer__icon link__footer__icon__two">Пн-Пт
 										7-16:00</a></li>
-								<li><a href="" class="footer__link link__footer__icon link__footer__icon__three">Киев,
+								<li><a href="https://goo.gl/maps/cJNG9cSxdwpZvH5W6"
+										class="footer__link link__footer__icon link__footer__icon__three"
+										target="_blank">Киев,
 										Хрещатик 12а</a></li>
 								<li><a href=""
 										class="footer__link link__footer__icon link__footer__icon__four">info@ryduch.com</a>
@@ -1193,7 +1314,7 @@
 							<div class="footer__title"> НОВОСТНАЯ РАССЫЛКА</div>
 							<ul class="footer__menu">
 								<li><a href="" class="footer__link">Подпишитесь прямо сейчас!</a></li>
-								<li><a href="" class="footer__link">Пн-Пт 7-16:00</a></li>
+								<li><a href="" class="footer__link footer__link__none">Пн-Пт 7-16:00</a></li>
 								<li><input type="text" placeholder="example@gmail.com" class="footer__email"></li>
 								<li class="li_row"><input type="checkbox" class="footer__radio">
 									<div class="iagree">Я прочитал Условия соглашения и

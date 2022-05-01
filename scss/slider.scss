@@ -262,12 +262,13 @@
 
 .heart_white {}
 
-.knife_button {
+.knife_button_link {
 	background-color: #E8AA31;
 	padding: 4px;
 	text-align: center;
 	border-radius: 3px;
 	margin-top: 28px;
+	display: block;
 
 	span {
 		font-size: 18px;
@@ -509,12 +510,13 @@
 
 .heart_white {}
 
-.forest_button {
+.forest_button_link {
 	background-color: #E8AA31;
 	padding: 4px;
 	text-align: center;
 	border-radius: 3px;
 	margin-top: 18px;
+	display: block;
 
 	span {
 		font-size: 14px;

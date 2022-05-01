@@ -31,6 +31,11 @@
   background-color: #141414;
 }
 
+.footer__container__two {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .footer__two__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,6 +79,7 @@
 
 .link__footer__icon {
   position: relative;
+  max-width: 200px;
 }
 
 .link__footer__icon::before {
@@ -84,7 +90,7 @@
   background: url(../img/footer-icon/call.svg) no-repeat center;
   position: absolute;
   top: 5px;
-  left: -30px;
+  left: -10%;
 }
 
 .link__footer__icon__two::before {

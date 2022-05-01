@@ -35,7 +35,10 @@
 	background-color: #141414;
 }
 
-.footer__container {}
+.footer__container__two {
+	padding-left: 30px;
+	padding-right: 30px;
+}
 
 .container {}
 
@@ -90,6 +93,7 @@
 
 .link__footer__icon {
 	position: relative;
+	max-width: 200px;
 
 	&::before {
 		content: "";
@@ -99,7 +103,7 @@
 		background: url(../img/footer-icon/call.svg) no-repeat center;
 		position: absolute;
 		top: 5px;
-		left: -30px;
+		left: -10%;
 	}
 }
 

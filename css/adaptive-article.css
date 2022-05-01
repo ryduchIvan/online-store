@@ -1,0 +1,144 @@
+@media (max-width: 1209px) {
+  .article__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .article__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 45%;
+            flex: 0 1 45%;
+    margin: 0px auto;
+  }
+}
+
+@media (max-width: 1179px) {
+  .lamp__product__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 45%;
+            flex: 0 1 45%;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .lamp__product__row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .lamp__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    margin: 0px auto;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .lamp__product__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 60%;
+            flex: 0 1 60%;
+  }
+}
+
+@media (max-width: 650px) {
+  .lamp__product__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .article__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    max-width: 400px;
+  }
+  .article__title {
+    margin: 0px auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .lamp__item {
+    display: none;
+  }
+  .lamp__item__two {
+    display: none;
+  }
+  .hidden__lamp__item {
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: url(../img/lamp/adaptive01.png) no-repeat;
+    background-position: right 115px;
+    height: 400px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+  .hidden__lamp__item__two {
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    background: url(../img/lamp/adaptive02.png) no-repeat;
+    background-position: 50% 170px;
+    margin-top: 50px;
+  }
+  .hidden__lamp__text {
+    text-align: center;
+  }
+  .hidden__lamp__title {
+    font-size: 24px;
+    font-family: Bold;
+    max-width: 200px;
+    margin: 0px auto;
+    position: relative;
+  }
+  .hidden__lamp__title::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #E8AA31;
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+  }
+  .hidden__lamp__desc {
+    max-width: 300px;
+    margin: 0px auto;
+    margin-top: 40px;
+    font-size: 18px;
+    font-family: Semibold;
+  }
+  .lamp__button__hidden {
+    width: 100%;
+    text-align: center;
+    background-color: #E8AA31;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .lamp__button__hidden span {
+    color: white;
+    font-size: 22px;
+    font-family: Semibold;
+  }
+}

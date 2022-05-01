@@ -135,9 +135,9 @@ function rollForestSlider() {
 	forestLine.style.transform = 'translate(-' + offset * widthForest / 2.95 + 'px)';
 
 }
+//SLIDER TWO-END
 
-
-
+//SLIDER THIRD
 const hiteBox = document.querySelector(`.hite__box`);
 const hiteLine = document.querySelector(`.hite__line`);
 const hiteItems = document.querySelectorAll(`.hite__items`);
@@ -209,3 +209,23 @@ hiteFight.addEventListener(`click`, function () {
 function hiteSlider() {
 	hiteLine.style.transform = 'translate(-' + scrollHint * thirdWidth / 4 + 'px)';
 }
+//SLIDER THIRD-END
+
+//HIDEN MENU
+
+const visibleLink = document.querySelector(`.black__link__one`);
+const hiddenMenu = document.querySelector(`.hidden__menu`);
+const hiddenContainer = document.querySelector(`.hidden__container`);
+
+visibleLink.addEventListener(`mouseover`, function () {
+	hiddenContainer.classList.add(`show-hidden-menu`);
+})
+visibleLink.addEventListener(`mouseout`, function () {
+	hiddenContainer.classList.remove(`show-hidden-menu`);
+})
+hiddenContainer.addEventListener(`mouseout`, function () {
+	hiddenContainer.classList.remove(`show-hidden-menu`);
+})
+hiddenContainer.addEventListener(`mouseover`, function () {
+	hiddenContainer.classList.add(`show-hidden-menu`);
+})

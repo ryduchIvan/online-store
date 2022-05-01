@@ -281,22 +281,23 @@
   margin-right: 8px;
 }
 
-.knife_button {
+.knife_button_link {
   background-color: #E8AA31;
   padding: 4px;
   text-align: center;
   border-radius: 3px;
   margin-top: 28px;
+  display: block;
 }
 
-.knife_button span {
+.knife_button_link span {
   font-size: 18px;
   line-height: 2.5;
   color: white;
   position: relative;
 }
 
-.knife_button span::after {
+.knife_button_link span::after {
   content: "";
   display: block;
   width: 20px;
@@ -549,22 +550,23 @@
   margin-right: 8px;
 }
 
-.forest_button {
+.forest_button_link {
   background-color: #E8AA31;
   padding: 4px;
   text-align: center;
   border-radius: 3px;
   margin-top: 18px;
+  display: block;
 }
 
-.forest_button span {
+.forest_button_link span {
   font-size: 14px;
   line-height: 2.5;
   color: white;
   position: relative;
 }
 
-.forest_button span::after {
+.forest_button_link span::after {
   content: "";
   display: block;
   width: 20px;
