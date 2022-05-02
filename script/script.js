@@ -17,11 +17,11 @@ let width;
 
 function init() {
 	width = sliderBox.offsetWidth;
-	sliderItem.forEach(item => {
-		item.style.width = width / 4.25 + 'px';
+	sliderItems.forEach(item => {
+		item.style.width = width + `px`;
 		item.style.height = `auto`;
 	})
-	sliderLine.style.width = width / 4.25 * sliderItem.length + 'px';
+	sliderLine.style.width = width * sliderItems.length + 'px';
 	rollSlider()
 }
 init();
@@ -72,7 +72,7 @@ slideFight.addEventListener(`click`, function () {
 	rollSlider()
 })
 function rollSlider() {
-	sliderLine.style.transform = 'translate(-' + count * width / 4 + 'px)';
+	sliderLine.style.transform = 'translate(-' + count * width + 'px)';
 }
 //SLIDER ONE-END
 
@@ -92,11 +92,11 @@ let widthForest;
 
 function initForest() {
 	widthForest = forestBox.offsetWidth;
-	forestItem.forEach(item => {
-		item.style.width = widthForest / 3.1 + 'px';
+	forestItems.forEach(item => {
+		item.style.width = widthForest + 'px';
 		item.style.height = 'auto';
 	})
-	forestLine.style.width = widthForest / 3.2 * forestItem.length + 'px';
+	forestLine.style.width = widthForest * forestItems.length + 'px';
 }
 initForest();
 forestButtonOne.addEventListener(`click`, function () {
@@ -132,7 +132,7 @@ forestButtonFhor.addEventListener(`click`, function () {
 	rollForestSlider()
 })
 function rollForestSlider() {
-	forestLine.style.transform = 'translate(-' + offset * widthForest / 2.95 + 'px)';
+	forestLine.style.transform = 'translate(-' + offset * widthForest * 1.1 + 'px)';
 
 }
 //SLIDER TWO-END
@@ -142,73 +142,20 @@ const hiteBox = document.querySelector(`.hite__box`);
 const hiteLine = document.querySelector(`.hite__line`);
 const hiteItems = document.querySelectorAll(`.hite__items`);
 const hiteItem = document.querySelectorAll(`.hite__item`);
-const hiteOne = document.querySelector(`.hite_slide_one`);
-const hiteTwo = document.querySelector(`.hite_slide_two`);
-const hiteThree = document.querySelector(`.hite_slide_three`);
-const hiteFour = document.querySelector(`.hite_slide_four`);
-const hiteFight = document.querySelector(`.hite_slide_fight`);
-const hiteSlide = document.querySelector(`.hite__slide`);
-let thirdWidth;
-let scrollHint = 0;
-
-function hite() {
-	thirdWidth = hiteBox.offsetWidth;
-	hiteItem.forEach(item => {
-		item.style.width = width / 4.25 + 'px';
-		item.style.height = `auto`;
+let widthHite;
+let hiteScroll = 0;
+function initTwo() {
+	widthHite = hiteBox.offsetWidth;
+	console.log(widthHite);
+	hiteItems.forEach(item => {
+		item.style.width = widthHite + `px`;
+		item.style.height = 'auto';
 	})
-	hiteLine.style.width = thirdWidth / 4.25 * hiteItem.length + 'px';
-	hiteSlider()
+	hiteLine.style.width = widthHite * hiteItems.length + 'px';
 }
-hite();
-hiteOne.addEventListener(`click`, function () {
-	hiteOne.classList.add(`new-style-hite`);
-	hiteTwo.classList.remove(`new-style-hite`);
-	hiteThree.classList.remove(`new-style-hite`);
-	hiteFour.classList.remove(`new-style-hite`);
-	hiteFight.classList.remove(`new-style-hite`);
-	scrollHint = 0;
-	hiteSlider()
-})
-hiteTwo.addEventListener(`click`, function () {
-	hiteTwo.classList.add(`new-style-hite`);
-	hiteOne.classList.remove(`new-style-hite`);
-	hiteThree.classList.remove(`new-style-hite`);
-	hiteFour.classList.remove(`new-style-hite`);
-	hiteFight.classList.remove(`new-style-hite`);
-	scrollHint = 1;
-	hiteSlider()
-})
-hiteThree.addEventListener(`click`, function () {
-	hiteThree.classList.add(`new-style-hite`);
-	hiteTwo.classList.remove(`new-style-hite`);
-	hiteOne.classList.remove(`new-style-hite`);
-	hiteFour.classList.remove(`new-style-hite`);
-	hiteFight.classList.remove(`new-style-hite`);
-	scrollHint = 2;
-	hiteSlider()
-})
-hiteFour.addEventListener(`click`, function () {
-	hiteFour.classList.add(`new-style-hite`);
-	hiteTwo.classList.remove(`new-style-hite`);
-	hiteThree.classList.remove(`new-style-hite`);
-	hiteOne.classList.remove(`new-style-hite`);
-	hiteFight.classList.remove(`new-style-hite`);
-	scrollHint = 3;
-	hiteSlider()
-})
-hiteFight.addEventListener(`click`, function () {
-	hiteFight.classList.add(`new-style-hite`);
-	hiteTwo.classList.remove(`new-style-hite`);
-	hiteThree.classList.remove(`new-style-hite`);
-	hiteFour.classList.remove(`new-style-hite`);
-	hiteOne.classList.remove(`new-style-hite`);
-	scrollHint = 4;
-	hiteSlider()
-})
-function hiteSlider() {
-	hiteLine.style.transform = 'translate(-' + scrollHint * thirdWidth / 4 + 'px)';
-}
+initTwo();
+
+
 //SLIDER THIRD-END
 
 //HIDEN MENU

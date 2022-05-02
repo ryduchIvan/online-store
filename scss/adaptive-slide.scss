@@ -1,0 +1,29 @@
+@media(max-width:1273px) {
+	.stock__item:nth-child(2n) {
+		display: none;
+	}
+
+	.slider__items {
+		display: flex;
+		justify-content: center;
+	}
+
+	.hite__item:nth-child(2n) {
+		display: none;
+	}
+
+	.hite__items {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media(max-width:693px) {
+	.stock__item:nth-child(3n) {
+		display: none;
+	}
+
+	.hite__item:nth-child(3n) {
+		display: none;
+	}
+}
