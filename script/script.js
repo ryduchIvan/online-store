@@ -25,7 +25,7 @@ function init() {
 	rollSlider()
 }
 init();
-window.addEventListener(`resize`, init);
+window.addEventListener(`resize`, init, forestSlide);
 slideOne.addEventListener(`click`, function () {
 	slideOne.classList.add(`new-style`);
 	slideTwo.classList.remove(`new-style`);
@@ -77,64 +77,6 @@ function rollSlider() {
 //SLIDER ONE-END
 
 //SLIDER TWO
-
-const forestBox = document.querySelector(`.forest__box`);
-const forestLine = document.querySelector(`.forest__line`);
-const forestItems = document.querySelectorAll(`.forest__items`);
-const forestItem = document.querySelectorAll(`.forest__item`);
-const forestMainButton = document.querySelector(`.forest__button`);
-const forestButtonOne = document.querySelector(`.forest__button_one`);
-const forestButtonTwo = document.querySelector(`.forest__button_two`);
-const forestButtonThree = document.querySelector(`.forest__button_three`);
-const forestButtonFhor = document.querySelector(`.forest__button_fhor`);
-let offset = 0;
-let widthForest;
-
-function initForest() {
-	widthForest = forestBox.offsetWidth;
-	forestItems.forEach(item => {
-		item.style.width = widthForest + 'px';
-		item.style.height = 'auto';
-	})
-	forestLine.style.width = widthForest * forestItems.length + 'px';
-}
-initForest();
-forestButtonOne.addEventListener(`click`, function () {
-	offset = 0;
-	forestButtonOne.classList.add(`new-style-forest`);
-	forestButtonTwo.classList.remove(`new-style-forest`);
-	forestButtonThree.classList.remove(`new-style-forest`);
-	forestButtonFhor.classList.remove(`new-style-forest`);
-	rollForestSlider()
-})
-forestButtonTwo.addEventListener(`click`, function () {
-	offset = 1;
-	forestButtonOne.classList.remove(`new-style-forest`);
-	forestButtonTwo.classList.add(`new-style-forest`);
-	forestButtonThree.classList.remove(`new-style-forest`);
-	forestButtonFhor.classList.remove(`new-style-forest`);
-	rollForestSlider()
-})
-forestButtonThree.addEventListener(`click`, function () {
-	offset = 2;
-	forestButtonOne.classList.remove(`new-style-forest`);
-	forestButtonTwo.classList.remove(`new-style-forest`);
-	forestButtonThree.classList.add(`new-style-forest`);
-	forestButtonFhor.classList.remove(`new-style-forest`);
-	rollForestSlider()
-})
-forestButtonFhor.addEventListener(`click`, function () {
-	offset = 3;
-	forestButtonOne.classList.remove(`new-style-forest`);
-	forestButtonTwo.classList.remove(`new-style-forest`);
-	forestButtonThree.classList.remove(`new-style-forest`);
-	forestButtonFhor.classList.add(`new-style-forest`);
-	rollForestSlider()
-})
-function rollForestSlider() {
-	forestLine.style.transform = 'translate(-' + offset * widthForest * 1.1 + 'px)';
-
-}
 //SLIDER TWO-END
 
 //SLIDER THIRD
@@ -142,6 +84,12 @@ const hiteBox = document.querySelector(`.hite__box`);
 const hiteLine = document.querySelector(`.hite__line`);
 const hiteItems = document.querySelectorAll(`.hite__items`);
 const hiteItem = document.querySelectorAll(`.hite__item`);
+const hiteSlide = document.querySelectorAll(`.hite`);
+const hiteSlideOne = document.querySelector(`.hite__one`);
+const hiteSlideTwo = document.querySelector(`.hite__two`);
+const hiteSlideThree = document.querySelector(`.hite__three`);
+const hiteSlideFour = document.querySelector(`.hite__four`);
+const hiteSlideFight = document.querySelector(`.hite__fight`);
 let widthHite;
 let hiteScroll = 0;
 function initTwo() {
@@ -156,8 +104,112 @@ function initTwo() {
 initTwo();
 
 
+hiteSlideOne.addEventListener(`click`, function () {
+	hiteSlideOne.classList.add(`hite-new-style`);
+	hiteSlideTwo.classList.remove(`hite-new-style`);
+	hiteSlideThree.classList.remove(`hite-new-style`)
+	hiteSlideFour.classList.remove(`hite-new-style`);
+	hiteSlideFight.classList.remove(`hite-new-style`);
+	hiteScroll = 0;
+	hiteTransform();
+})
+hiteSlideTwo.addEventListener(`click`, function () {
+	hiteSlideOne.classList.remove(`hite-new-style`);
+	hiteSlideTwo.classList.add(`hite-new-style`);
+	hiteSlideThree.classList.remove(`hite-new-style`)
+	hiteSlideFour.classList.remove(`hite-new-style`);
+	hiteSlideFight.classList.remove(`hite-new-style`);
+	hiteScroll = 1;
+	hiteTransform();
+})
+hiteSlideThree.addEventListener(`click`, function () {
+	hiteSlideOne.classList.remove(`hite-new-style`);
+	hiteSlideTwo.classList.remove(`hite-new-style`);
+	hiteSlideThree.classList.add(`hite-new-style`)
+	hiteSlideFour.classList.remove(`hite-new-style`);
+	hiteSlideFight.classList.remove(`hite-new-style`);
+	hiteScroll = 2;
+	hiteTransform();
+})
+hiteSlideFour.addEventListener(`click`, function () {
+	hiteSlideOne.classList.remove(`hite-new-style`);
+	hiteSlideTwo.classList.remove(`hite-new-style`);
+	hiteSlideThree.classList.remove(`hite-new-style`)
+	hiteSlideFour.classList.add(`hite-new-style`);
+	hiteSlideFight.classList.remove(`hite-new-style`);
+	hiteScroll = 3;
+	hiteTransform();
+})
+hiteSlideFight.addEventListener(`click`, function () {
+	hiteSlideOne.classList.remove(`hite-new-style`);
+	hiteSlideTwo.classList.remove(`hite-new-style`);
+	hiteSlideThree.classList.remove(`hite-new-style`)
+	hiteSlideFour.classList.remove(`hite-new-style`);
+	hiteSlideFight.classList.add(`hite-new-style`);
+	hiteScroll = 4;
+	hiteTransform();
+})
+function hiteTransform() {
+	hiteLine.style.transform = 'translate(-' + hiteScroll * widthHite + 'px)';
+}
 //SLIDER THIRD-END
+const forestButton = document.querySelectorAll(`.forest__buttons`);
+const forestButtonOne = document.querySelector(`.forest__button_one`);
+const forestButtonTwo = document.querySelector(`.forest__button_two`);
+const forestButtonThree = document.querySelector(`.forest__button_three`);
+const forestButtonFour = document.querySelector(`.forest__button_four`);
+const forestBox = document.querySelector(`.forest__box`);
+const forestItems = document.querySelectorAll(`.forest__items`)
+const forestLine = document.querySelector(`.forest__line`);
+let widthForest;
+let forestTranform = 0;
 
+function forestInit() {
+	widthForest = forestBox.offsetWidth;
+	forestItems.forEach(item => {
+		item.style.width = widthForest + 'px';
+		item.style.height = 'auto';
+	})
+	forestLine.style.width = widthForest * forestItems.length + 'px';
+}
+forestInit();
+
+forestButtonOne.addEventListener(`click`, function () {
+	forestButtonOne.classList.add(`new-style-forest`);
+	forestButtonTwo.classList.remove(`new-style-forest`);
+	forestButtonThree.classList.remove(`new-style-forest`);
+	forestButtonFour.classList.remove(`new-style-forest`);
+	widthForest = 0;
+	forestSlide();
+})
+forestButtonTwo.addEventListener(`click`, function () {
+	forestButtonOne.classList.remove(`new-style-forest`);
+	forestButtonTwo.classList.add(`new-style-forest`);
+	forestButtonThree.classList.remove(`new-style-forest`);
+	forestButtonFour.classList.remove(`new-style-forest`);
+	widthForest = 1;
+	forestSlide();
+})
+forestButtonThree.addEventListener(`click`, function () {
+	forestButtonOne.classList.remove(`new-style-forest`);
+	forestButtonTwo.classList.remove(`new-style-forest`);
+	forestButtonThree.classList.add(`new-style-forest`);
+	forestButtonFour.classList.remove(`new-style-forest`);
+	widthForest = 2;
+	forestSlide();
+})
+forestButtonFour.addEventListener(`click`, function () {
+	forestButtonOne.classList.remove(`new-style-forest`);
+	forestButtonTwo.classList.remove(`new-style-forest`);
+	forestButtonThree.classList.remove(`new-style-forest`);
+	forestButtonFour.classList.add(`new-style-forest`);
+	widthForest = 3;
+	forestSlide();
+})
+
+function forestSlide() {
+	forestLine.style.transform = 'translate(-' + widthHite * widthForest + 'px)';
+}
 //HIDEN MENU
 
 const visibleLink = document.querySelector(`.black__link__one`);
