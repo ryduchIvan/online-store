@@ -237,6 +237,7 @@ const mobileMenu = document.querySelector(`.mobile__menu`)
 const mobileList = document.querySelector(`.mobile__list`);
 const dropdown = document.querySelector(`.mobile__list--dropdown`);
 const mobileBack = document.querySelector(`.mobile-black__link`);
+const dropDropMenu = document.querySelector(`.mobile__list--drop-dropdown`);
 
 
 const scrollTop = function () {
@@ -272,7 +273,6 @@ mobileList.addEventListener(`click`, function (event) {
 	}
 	if (event.target.classList.contains(`catalog__open`)) {
 		event.preventDefault();
-		event.target.closest(`.mobile__list--dropdown`).classList.remove(`dropdown-tranformation`);
 		event.target.closest(`.dropdown-submenu__list-item`).querySelector(`.mobile__list--drop-dropdown`).classList.add(`drop-dropdown-tranformation`);
 	}
 	if (event.target.classList.contains(`mobile-back__link`)) {

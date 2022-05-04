@@ -143,11 +143,12 @@
 .mobile__list--dropdown {
   position: absolute;
   top: 0px;
-  right: -200%;
+  right: auto;
+  left: 100%;
   width: 100%;
   height: 100%;
   background-color: black;
-  position: relative;
+  display: none;
 }
 
 .mobile-back__link_style {
@@ -202,14 +203,14 @@
 }
 
 .mobile__list--drop-dropdown {
-  position: absolute;
-  left: -300%;
-  top: 0%;
   background-color: black;
   height: 100%;
   width: 100%;
-  -webkit-transition: all 15s ease;
-  transition: all 15s ease;
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .drop-dropdown__link {
@@ -258,21 +259,22 @@
 .mobile__nav-tranformation {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .dropdown-tranformation {
-  position: absolute;
-  top: 0px;
-  right: -100%;
-  width: 100%;
-  height: 100%;
+  display: block;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: all 3s ease;
+  transition: all 3s ease;
 }
 
 .drop-dropdown-tranformation {
   left: 0%;
-  top: -100%;
-  -webkit-transition: all 5s ease;
-  transition: all 5s ease;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .lock {
