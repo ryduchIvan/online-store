@@ -203,11 +203,13 @@
 
 .mobile__list--drop-dropdown {
   position: absolute;
-  right: -300%;
+  left: -300%;
   top: 0%;
   background-color: black;
   height: 100%;
   width: 100%;
+  -webkit-transition: all 15s ease;
+  transition: all 15s ease;
 }
 
 .drop-dropdown__link {
@@ -267,8 +269,10 @@
 }
 
 .drop-dropdown-tranformation {
-  right: 100%;
+  left: 0%;
   top: -100%;
+  -webkit-transition: all 5s ease;
+  transition: all 5s ease;
 }
 
 .lock {
