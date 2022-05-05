@@ -130,4 +130,17 @@
 			font-family: Semibold;
 		}
 	}
+
+	.lamp__product__row {
+		justify-content: center;
+	}
+
+	.lamp__product__item {
+		margin: 20px auto 0px auto;
+	}
+
+	.lamp__container {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
 }

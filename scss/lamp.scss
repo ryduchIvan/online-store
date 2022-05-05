@@ -58,6 +58,10 @@
 	max-width: 210px;
 }
 
+.hidden__lamp__title {
+	padding-top: 15px;
+}
+
 .catalog__title {}
 
 .lamp__text {
@@ -83,7 +87,9 @@
 
 .lamp__product {}
 
-.lamp__container {}
+.lamp__container {
+	padding: 0px;
+}
 
 .container {}
 

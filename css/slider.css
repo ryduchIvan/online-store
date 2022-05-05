@@ -138,10 +138,18 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .stock__view__all {
@@ -151,6 +159,19 @@
   color: #1414146e;
   position: relative;
   margin-right: 20px;
+  max-width: 200px;
+  position: relative;
+}
+
+.stock__view__all::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 17px;
+  background: url(../img/icon/gold-arrow.svg) no-repeat center;
+  position: absolute;
+  top: 9px;
+  left: 105%;
 }
 
 .stock__box {
@@ -400,7 +421,7 @@
 }
 
 .forest__desc {
-  width: 336px;
+  max-width: 536px;
   font-size: 18px;
   line-height: 1.5;
   color: white;

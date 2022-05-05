@@ -141,7 +141,11 @@
 	color: #141414;
 	font-family: Bold;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .stock__view__all {
@@ -151,6 +155,19 @@
 	color: #1414146e;
 	position: relative;
 	margin-right: 20px;
+	max-width: 200px;
+	position: relative;
+
+	&::after {
+		content: "";
+		display: block;
+		width: 10px;
+		height: 17px;
+		background: url(../img/icon/gold-arrow.svg) no-repeat center;
+		position: absolute;
+		top: 9px;
+		left: 105%;
+	}
 }
 
 .stock__box {
@@ -374,7 +391,7 @@
 }
 
 .forest__desc {
-	width: 336px;
+	max-width: 536px;
 	font-size: 18px;
 	line-height: 1.5;
 	color: white;

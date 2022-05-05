@@ -28,7 +28,8 @@
 	.forest__item {}
 
 	.forest__text {
-		padding-right: 0px;
+		padding-right: 15px;
+		padding-left: 15px;
 	}
 }
 
@@ -69,10 +70,6 @@
 		margin: 0px auto;
 	}
 
-	.forest__desc {
-		width: 300px;
-	}
-
 	.forest__items {
 		justify-content: center;
 	}
@@ -102,4 +99,7 @@
 		padding: 0px;
 	}
 
+	.stock__title {
+		flex-direction: column;
+	}
 }
