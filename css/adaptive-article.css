@@ -7,7 +7,7 @@
     -webkit-box-flex: 0;
         -ms-flex: 0 1 45%;
             flex: 0 1 45%;
-    margin: 0px auto;
+    margin: 0px auto 20px auto;
   }
 }
 
@@ -39,8 +39,8 @@
 @media (max-width: 767px) {
   .lamp__product__item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 60%;
-            flex: 0 1 60%;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
   }
 }
 
@@ -52,12 +52,13 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .article__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
-    max-width: 400px;
+    max-width: 600px;
+    margin-bottom: 20px;
   }
   .article__title {
     margin: 0px auto;

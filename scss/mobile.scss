@@ -6,7 +6,7 @@
 	top: 0px;
 	left: 0px;
 	z-index: 3;
-	transform: translateX(-100%);
+	transform: translateX(100%);
 }
 
 .mobile__menu__container {
@@ -242,7 +242,7 @@
 .dropdown-tranformation {
 	display: block;
 	transform: none;
-	transition: all 3s ease;
+	transition: all 0.3s ease;
 }
 
 .drop-dropdown-tranformation {
@@ -250,6 +250,11 @@
 	transition: all 0.3s;
 }
 
+.dropdown-close {
+	transform: translateX(-100%);
+}
+
+.drop-dropdown-open {}
 
 .lock {
 	overflow: hidden;

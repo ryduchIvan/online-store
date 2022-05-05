@@ -19,6 +19,8 @@
   width: 385px;
   height: 195px;
   background: url(../img/catalog/catolog1.png) no-repeat center;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-size: 100% auto;
   background-color: white;
   -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
@@ -119,6 +121,10 @@
 
 /*--FIRST-SECTION-END----------------------*/
 /*--SECTOND-SECTION--------------------*/
+.stock__container {
+  padding: 0px;
+}
+
 .slider__stock {
   margin-top: 120px;
 }
@@ -132,9 +138,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .stock__view__all {
@@ -144,17 +151,6 @@
   color: #1414146e;
   position: relative;
   margin-right: 20px;
-}
-
-.stock__view__all::after {
-  content: "";
-  display: block;
-  width: 9.58px;
-  height: 15.8px;
-  background: url(../img/icon/gold-arrow.svg) no-repeat center;
-  position: absolute;
-  top: 20%;
-  left: 110%;
 }
 
 .stock__box {
@@ -176,21 +172,24 @@
   display: flex;
   width: 100%;
   height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .stock__item {
   -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   padding: 20px;
-}
-
-.stock__item:not(:first-child) {
-  margin-left: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 24%;
+          flex: 0 1 24%;
 }
 
 .stock__img {
   max-width: 250px;
   height: 240px;
+  margin: 0px auto;
 }
 
 .stock__img img {
@@ -387,6 +386,10 @@
   color: white;
 }
 
+.forest__text {
+  padding-right: 55px;
+}
+
 .forest__title {
   margin-top: 10px;
   font-size: 22px;
@@ -429,9 +432,7 @@
 .forest__box {
   width: 100%;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  padding-top: 20px;
 }
 
 .forest__line {
@@ -448,13 +449,19 @@
   display: flex;
   width: 100%;
   height: 100%;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .forest__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 32%;
+          flex: 0 1 32%;
   background-color: white;
+  padding: 20px;
 }
 
 .forest__buttons {
@@ -466,7 +473,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
 
 .forest__button {

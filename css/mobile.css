@@ -6,8 +6,8 @@
   top: 0px;
   left: 0px;
   z-index: 3;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .mobile__menu__container {
@@ -267,14 +267,19 @@
   display: block;
   -webkit-transform: none;
           transform: none;
-  -webkit-transition: all 3s ease;
-  transition: all 3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .drop-dropdown-tranformation {
   left: 0%;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.dropdown-close {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 .lock {

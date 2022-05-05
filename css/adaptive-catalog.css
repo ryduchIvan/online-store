@@ -1,5 +1,34 @@
 @media (max-width: 1255px) {
   .catalog__item {
     margin: 0px auto;
+    width: 400px;
+  }
+  .catalog__item__fhor {
+    background-position: center;
+  }
+}
+
+@media (max-width: 854px) {
+  .catalog__item {
+    width: 80%;
+    background-size: 100% auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media (max-width: 640px) {
+  .catalog__container {
+    padding: 0px;
+  }
+  .catalog__item {
+    width: 95%;
+  }
+  .catalog__item__fhor {
+    background-position: top left;
+  }
+  .forest__desc {
+    width: 200px;
+    font-size: 16px;
   }
 }

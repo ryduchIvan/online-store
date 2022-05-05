@@ -23,6 +23,7 @@
 	width: 385px;
 	height: 195px;
 	background: url(../img/catalog/catolog1.png) no-repeat center;
+	object-fit: cover;
 	background-size: 100% auto;
 	background-color: white;
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
@@ -125,6 +126,9 @@
 /*--FIRST-SECTION-END----------------------*/
 
 /*--SECTOND-SECTION--------------------*/
+.stock__container {
+	padding: 0px;
+}
 
 .slider__stock {
 	margin-top: 120px;
@@ -137,7 +141,7 @@
 	color: #141414;
 	font-family: Bold;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 }
 
 .stock__view__all {
@@ -147,17 +151,6 @@
 	color: #1414146e;
 	position: relative;
 	margin-right: 20px;
-
-	&::after {
-		content: "";
-		display: block;
-		width: 9.58px;
-		height: 15.8px;
-		background: url(../img/icon/gold-arrow.svg) no-repeat center;
-		position: absolute;
-		top: 20%;
-		left: 110%;
-	}
 }
 
 .stock__box {
@@ -174,20 +167,19 @@
 	display: flex;
 	width: 100%;
 	height: 100%;
+	justify-content: space-between;
 }
 
 .stock__item {
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 	padding: 20px;
-
-	&:not(:first-child) {
-		margin-left: 20px;
-	}
+	flex: 0 1 24%;
 }
 
 .stock__img {
 	max-width: 250px;
 	height: 240px;
+	margin: 0px auto;
 
 	img {
 		max-width: 250px;
@@ -360,14 +352,16 @@
 	width: 100%;
 }
 
-.forest__text {}
-
 .title__forest {
 	margin-top: 10px;
 	font-size: 30px;
 	height: 1.3;
 	font-family: Bold;
 	color: white;
+}
+
+.forest__text {
+	padding-right: 55px;
 }
 
 .forest__title {
@@ -412,7 +406,7 @@
 .forest__box {
 	width: 100%;
 	overflow: hidden;
-	display: flex;
+	padding-top: 20px;
 }
 
 .forest__line {
@@ -424,11 +418,14 @@
 	display: flex;
 	width: 100%;
 	height: 100%;
-	justify-content: flex-end;
+	justify-content: space-between;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .forest__item {
+	flex: 0 1 32%;
 	background-color: white;
+	padding: 20px;
 }
 
 .forest__buttons {
@@ -436,7 +433,8 @@
 	margin: 0px auto;
 	display: flex;
 	justify-content: space-between;
-	margin-top: 30px;
+	margin-top: 60px;
+	margin-bottom: 30px;
 }
 
 .forest__button {
@@ -462,6 +460,8 @@
 	}
 }
 
+.forest__button_one {}
+
 .new-style-forest {
 	background: #E8AA31;
 	transition: all 0.3s ease 0s;
@@ -471,13 +471,11 @@
 	}
 }
 
-.forest__button_one {}
-
 .forest__button_two {}
 
 .forest__button_three {}
 
-.forest__button_fhor {}
+.forest__button_four {}
 
 /*--SECTION-THIRD-END----------------*/
 .hite__slide__container {

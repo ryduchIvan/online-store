@@ -81,6 +81,18 @@ body {
   color: white;
   line-height: 1.2;
   margin-left: 15px;
+  position: relative;
+}
+
+.header__account__text::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 27.66px;
+  background: url(../img/logo-header/account.svg) no-repeat center;
+  position: absolute;
+  top: -2px;
+  left: -35px;
 }
 
 .white__line {

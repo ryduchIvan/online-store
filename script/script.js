@@ -25,7 +25,7 @@ function init() {
 	rollSlider()
 }
 init();
-window.addEventListener(`resize`, init, forestSlide);
+window.addEventListener(`resize`, init);
 slideOne.addEventListener(`click`, function () {
 	slideOne.classList.add(`new-style`);
 	slideTwo.classList.remove(`new-style`);
@@ -94,7 +94,6 @@ let widthHite;
 let hiteScroll = 0;
 function initTwo() {
 	widthHite = hiteBox.offsetWidth;
-	console.log(widthHite);
 	hiteItems.forEach(item => {
 		item.style.width = widthHite + `px`;
 		item.style.height = 'auto';
@@ -102,7 +101,7 @@ function initTwo() {
 	hiteLine.style.width = widthHite * hiteItems.length + 'px';
 }
 initTwo();
-
+window.addEventListener(`resize`, initTwo);
 
 hiteSlideOne.addEventListener(`click`, function () {
 	hiteSlideOne.classList.add(`hite-new-style`);
@@ -153,62 +152,64 @@ function hiteTransform() {
 	hiteLine.style.transform = 'translate(-' + hiteScroll * widthHite + 'px)';
 }
 //SLIDER THIRD-END
-const forestButton = document.querySelectorAll(`.forest__buttons`);
-const forestButtonOne = document.querySelector(`.forest__button_one`);
-const forestButtonTwo = document.querySelector(`.forest__button_two`);
-const forestButtonThree = document.querySelector(`.forest__button_three`);
-const forestButtonFour = document.querySelector(`.forest__button_four`);
 const forestBox = document.querySelector(`.forest__box`);
-const forestItems = document.querySelectorAll(`.forest__items`)
 const forestLine = document.querySelector(`.forest__line`);
-let widthForest;
-let forestTranform = 0;
+const forestItems = document.querySelectorAll(`.forest__items`);
+const forestItem = document.querySelectorAll(`.forest__item`);
+const forestSlide = document.querySelector(`.forst__button`);
+const forestOne = document.querySelector(`.forest__button_one`);
+const forestTwo = document.querySelector(`.forest__button_two`);
+const forestThree = document.querySelector(`.forest__button_three`);
+const forestFour = document.querySelector(`.forest__button_four`);
+let forestCount = 0;
+let forestWidth;
 
 function forestInit() {
-	widthForest = forestBox.offsetWidth;
+	forestWidth = forestBox.offsetWidth;
 	forestItems.forEach(item => {
-		item.style.width = widthForest + 'px';
+		item.style.width = forestWidth + 'px';
 		item.style.height = 'auto';
 	})
-	forestLine.style.width = widthForest * forestItems.length + 'px';
+	forestLine.style.width = forestWidth * forestItems.length + 'px';
+	forestScroll()
 }
 forestInit();
+window.addEventListener(`resize`, forestInit);
 
-forestButtonOne.addEventListener(`click`, function () {
-	forestButtonOne.classList.add(`new-style-forest`);
-	forestButtonTwo.classList.remove(`new-style-forest`);
-	forestButtonThree.classList.remove(`new-style-forest`);
-	forestButtonFour.classList.remove(`new-style-forest`);
-	widthForest = 0;
-	forestSlide();
+forestOne.addEventListener(`click`, function () {
+	forestOne.classList.add(`new-style-forest`)
+	forestTwo.classList.remove(`new-style-forest`);
+	forestThree.classList.remove(`new-style-forest`);
+	forestFour.classList.remove(`new-style-forest`);
+	forestCount = 0;
+	forestScroll()
 })
-forestButtonTwo.addEventListener(`click`, function () {
-	forestButtonOne.classList.remove(`new-style-forest`);
-	forestButtonTwo.classList.add(`new-style-forest`);
-	forestButtonThree.classList.remove(`new-style-forest`);
-	forestButtonFour.classList.remove(`new-style-forest`);
-	widthForest = 1;
-	forestSlide();
+forestTwo.addEventListener(`click`, function () {
+	forestOne.classList.remove(`new-style-forest`)
+	forestTwo.classList.add(`new-style-forest`);
+	forestThree.classList.remove(`new-style-forest`);
+	forestFour.classList.remove(`new-style-forest`);
+	forestCount = 1;
+	forestScroll()
 })
-forestButtonThree.addEventListener(`click`, function () {
-	forestButtonOne.classList.remove(`new-style-forest`);
-	forestButtonTwo.classList.remove(`new-style-forest`);
-	forestButtonThree.classList.add(`new-style-forest`);
-	forestButtonFour.classList.remove(`new-style-forest`);
-	widthForest = 2;
-	forestSlide();
+forestThree.addEventListener(`click`, function () {
+	forestOne.classList.remove(`new-style-forest`)
+	forestTwo.classList.remove(`new-style-forest`);
+	forestThree.classList.add(`new-style-forest`);
+	forestFour.classList.remove(`new-style-forest`);
+	forestCount = 2;
+	forestScroll()
 })
-forestButtonFour.addEventListener(`click`, function () {
-	forestButtonOne.classList.remove(`new-style-forest`);
-	forestButtonTwo.classList.remove(`new-style-forest`);
-	forestButtonThree.classList.remove(`new-style-forest`);
-	forestButtonFour.classList.add(`new-style-forest`);
-	widthForest = 3;
-	forestSlide();
+forestFour.addEventListener(`click`, function () {
+	forestOne.classList.remove(`new-style-forest`)
+	forestTwo.classList.remove(`new-style-forest`);
+	forestThree.classList.remove(`new-style-forest`);
+	forestFour.classList.add(`new-style-forest`);
+	forestCount = 3;
+	forestScroll()
 })
-
-function forestSlide() {
-	forestLine.style.transform = 'translate(-' + widthHite * widthForest + 'px)';
+function forestScroll() {
+	forestLine.style.transform = 'translate(-' + forestCount * forestWidth + 'px)';
 }
 //HIDEN MENU
 
@@ -273,7 +274,7 @@ mobileList.addEventListener(`click`, function (event) {
 	}
 	if (event.target.classList.contains(`catalog__open`)) {
 		event.preventDefault();
-		event.target.closest(`.dropdown-submenu__list-item`).querySelector(`.mobile__list--drop-dropdown`).classList.add(`drop-dropdown-tranformation`);
+		event.target.closest(`.mobile__list--dropdown`).classList.add(`dropdown-close`);
 	}
 	if (event.target.classList.contains(`mobile-back__link`)) {
 		event.preventDefault();
@@ -283,7 +284,6 @@ mobileList.addEventListener(`click`, function (event) {
 	}
 	if (event.target.classList.contains(`drop-drop-back__link`)) {
 		event.preventDefault();
-		event.target.closest(`.mobile__list--dropdown`).classList.add(`dropdown-tranformation`);
-		event.target.closest(`.dropdown-submenu__list-item`).querySelector(`.mobile__list--drop-dropdown`).classList.remove(`drop-dropdown-tranformation`);
+		event.target.closest(`.mobile__list--dropdown`).classList.remove(`dropdown-close`);
 	}
 })

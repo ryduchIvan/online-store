@@ -75,4 +75,7 @@
             flex: 0 1 100%;
     margin-top: 15px;
   }
+  .white__input {
+    display: none;
+  }
 }
