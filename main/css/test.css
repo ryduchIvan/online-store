@@ -1,0 +1,38 @@
+.nav {
+	width: 200px;
+	height: 100px;
+	border: 2px solid black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 200px;
+	margin-left: 300px;
+}
+
+.nav-item {
+	font-size: 20px;
+}
+
+.knife__items {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 900px;
+	justify-content: space-between;
+}
+
+.knife__item {
+	flex: 0 1 30%;
+	border: 1px solid red;
+	margin-top: 50px;
+	box-sizing: border-box;
+}
+
+.item__title {}
+
+.item__desc {}
+
+.item__price {
+	color: royalblue;
+	font-size: 22px;
+}

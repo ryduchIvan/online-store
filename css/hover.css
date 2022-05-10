@@ -1,0 +1,55 @@
+*:hover {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header__link:hover {
+  color: #E8AA31;
+}
+
+.location__text {
+  cursor: pointer;
+  color: black;
+}
+
+.bag__tex:hover a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.white__contact a {
+  color: #E8AA31;
+}
+
+.white__contact:hover a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.hidden__link:hover {
+  color: #E8AA31;
+}
+
+.catalog__link:hover {
+  text-decoration: underline;
+}
+
+.article__desc {
+  cursor: pointer;
+}
+
+.article__desc:hover {
+  text-decoration: underline;
+}
+
+.lamp__button {
+  cursor: pointer;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__link__none:hover {
+  text-decoration: none;
+}
