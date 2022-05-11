@@ -1,40 +1,74 @@
-const sortPriceDown = document.querySelector(.sort_asc);//создали константу внесли кнопу для сиртировки по возростанию цены
-const sortPriceUp = document.querySelector(.sort_desc);//создали константу внесли кнопу для сиртировки по убыванию цены
-const sortRating = document.querySelector(.sort - rating);//создали константу внесли кнопу для сиртировки по возростанию рейтинга
+let a = [5, 2, 12, 9, 7, 11, 8];// создали переменную а с массивом цифр
 
-sortPriceDown.addEventListener(click, function () { //на кнопку повесли метод клик , который запускат функцию с атрибутом data-price
-	mySortDown(data - price);
+for (let i = 0; i < a.length; i++) {
+	for (let j = i; j < a.length; j++) {
+		if (a[i] > a[j]) {
+			let temp = a[i];
+			a[i] = a[j];
+			a[j] = temp;
+		}
+		console.log(a);
+	}
+}
+
+//const nav = document.querySelector(`.nav`);
+//replaceNode = nav.replaceChild(nav.children[1], nav.children[0]);
+//console.log(replaceNode);
+//nav.appendChild(replaceNode);
+
+const sortPriceDown = document.querySelector(`.sort_asc`);
+const sortPriceUp = document.querySelector(`.sort_desc`);
+const sortPopular = document.querySelector(`.sort_popular`);
+const sortRating = document.querySelector(`.sort_rating`);
+const sortPriceDown = document.querySelector(`.sort_price_down`);
+const sortPriceUp = document.querySelector(`.sort_price_up`);
+
+sortPriceDown.addEventListener(`click`, function () {
+	mySortDown(`data-price`);
 })
-sortPriceUp.addEventListener(click, function () {//на кнопку повесли метод клик , который запускат функцию с атрибутом data-price
-	mySortUp(data - price);
-})
-sortRating.addEventListener(click, function () {//на кнопку повесли метод клик , который запускат функцию с атрибутом data-rating
-	mySortUp(data - rating);
+sortPriceUp.addEventListener(`click`, function () {
+	mySortUp(`data-price`);
 })
 
-function mySortDown(sortType) {// создали функцию с параметром sortType
-	const nav = document.querySelector(.knife__items);//создали константу с родителем всех элементов
-	for (let i = 0; i < nav.children.length; i++) {//запускаем цикл который будет сравнивать атрибути не больше количество детей раз
-		for (let j = i; j < nav.children.length; j++) {//запускаем еще один цикл с которым будет сравниваться 
-			if (+nav.children[i].getAttribute(sortType) > +nav.children[j].getAttribute(sortType)) {// если атрибути одного элемента будет больше чем атрибут другоо 
-				replaceNode = nav.replaceChild(nav.children[j], nav.children[i]);//тогда меняем их местами 
-				insertAfter(replaceNode, nav.children[i]);//а элемент который пропал виводим под него 
+sortPriceDown.addEventListener(`click`, function () {
+	mySortDown(`data-price`);
+});
+
+sortPriceUp.addEventListener(`click`, function () {
+	mySortUp(`data-price`);
+});
+
+sortPopular.addEventListener(`click`, function () {
+	mySortDown(`data-popular`)
+});
+
+sortRating.addEventListener(`click`, function () {
+	mySortDown(`data-rating`);
+})
+
+function mySortDown(sortType) {
+	const items = document.querySelector(`.catalog__grid`)
+	for (let i = 0; i < items.children.length; i++) {
+		for (let j = i; j < items.children.length; j++) {
+			if (+items.children[i].getAttribute(sortType) > +items.children[j].getAttribute(sortType)) {
+				replaceNode = items.replaceChild(items.children[j], items.children[i]);
+				insertAfter(replaceNode, items.children[i]);
 			}
 		}
 	}
 }
 function mySortUp(sortType) {
-	const nav = document.querySelector(.knife__items);
-	for (let i = 0; i < nav.children.length; i++) {
-		for (let j = i; j < nav.children.length; j++) {
-			if (+nav.children[i].getAttribute(sortType) < +nav.children[j].getAttribute(sortType)) {
-				replaceNode = nav.replaceChild(nav.children[j], nav.children[i]);
-				insertAfter(replaceNode, nav.children[i]);
+	const items = document.querySelector(`.catalog__grid`)
+	for (let i = 0; i < items.children.length; i++) {
+		for (let j = i; j < items.children.length; j++) {
+			if (+items.children[i].getAttribute(sortType) < +items.children[j].getAttribute(sortType)) {
+				replaceNode = items.replaceChild(items.children[j], items.children[i]);
+				insertAfter(replaceNode, items.children[i]);
 			}
 		}
 	}
 }
 
-function insertAfter(elem, refElem) {//создаем функцию для ввода пропавшего элемента 
-	return refElem.parentNode.insertBefore(elem, refElem.nextSibling);//??
+function insertAfter(elem, refElem) {
+	return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
 }

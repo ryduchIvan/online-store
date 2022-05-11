@@ -1,0 +1,154 @@
+.main {}
+
+.main__container {}
+
+.container {}
+
+.sort__row {
+	padding-top: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.sort__menu {}
+
+.sort__menu_title {
+	font-size: 24px;
+	line-height: 1.2;
+	font-family: Bold;
+}
+
+.sort__menu_nav {
+	margin-top: 25px;
+
+	span {
+		font-size: 16px;
+		line-height: 1.2;
+		color: #E8AA31;
+	}
+}
+
+.sort__menu_link {
+	font-size: 16px;
+	line-height: 1.2;
+	color: rgba(20, 20, 20, 0.5);
+	position: relative;
+	margin-right: 30px;
+
+	&::after {
+		content: "";
+		width: 7.15px;
+		height: 11.8px;
+		background: url(../../catalog/img/sort/arrow_sort.svg) no-repeat center;
+		display: block;
+		position: absolute;
+		top: 5px;
+		left: 120%;
+	}
+}
+
+.sort__select {}
+
+.sort__select_row {}
+
+.select__sort {
+	width: 374px;
+	border: 1px solid rgba(4, 4, 4, 0.3);
+	height: 40px;
+	border-radius: 3px;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.sort_popular {
+	border-radius: 3px;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.sort_price_down {
+	border-radius: 3px;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.sort_price_up {
+	border-radius: 3px;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.sort_rating {
+	border-radius: 3px;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.sort__select {
+	width: 374px;
+	border: 1px solid rgba(4, 4, 4, 0.3);
+	height: 40px;
+	color: rgba(0, 0, 0, 0.5);
+	z-index: 3;
+	background-color: white;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	p {
+		position: relative;
+		margin-left: 6px;
+		max-width: 350px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	img {
+		width: 20px;
+		height: 25px;
+		margin-right: 10px;
+	}
+
+}
+
+.select__item_all {
+	position: absolute;
+	top: 38px;
+	left: -1px;
+	border: 1px solid rgba(4, 4, 4, 0.3);
+	border-radius: 3px;
+	display: none;
+}
+
+.select__item {
+	color: rgba(0, 0, 0, 0.5);
+	width: 374px;
+	border-bottom: 1px solid rgba(4, 4, 4, 0.3);
+	background-color: white;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	width: 372px;
+	padding-left: 6px;
+	cursor: pointer;
+}
+
+.show-sort-item {
+	display: block;
+}
+
+.sort__select_arrow {
+	display: block;
+	padding: 5px;
+	transform: rotate(90deg);
+	cursor: pointer;
+}
+
+.rotate-arrow {
+	transform: rotate(0deg);
+}
+
+.select__item_popular {}
+
+.select__item_rating {}
+
+.select__item_price_down {}
+
+.select__item_price_up {}

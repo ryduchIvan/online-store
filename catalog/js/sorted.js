@@ -1,33 +1,49 @@
-let a = [5, 2, 12, 9, 7, 11, 8];// создали переменную а с массивом цифр
+const sortArrow = document.querySelector(`.sort__select_arrow`);
+const sortSelectItem = document.querySelector(`.select__item_all`);
+const sortSelect = document.querySelector(`.sort__select`);
+const sortSelectText = document.querySelector(`.sort__select_row_text`);
 
-for (let i = 0; i < a.length; i++) {
-	for (let j = i; j < a.length; j++) {
-		if (a[i] > a[j]) {
-			let temp = a[i];
-			a[i] = a[j];
-			a[j] = temp;
-		}
-		console.log(a);
-	}
-}
-
-//const nav = document.querySelector(`.nav`);
-//replaceNode = nav.replaceChild(nav.children[1], nav.children[0]);
-//console.log(replaceNode);
-//nav.appendChild(replaceNode);
-
-const sortPriceDown = document.querySelector(`.sort_asc`);
-const sortPriceUp = document.querySelector(`.sort_desc`);
-
-sortPriceDown.addEventListener(`click`, function () {
-	mySortDown(`data-price`);
+sortArrow.addEventListener(`click`, function () {
+	sortSelectItem.classList.toggle(`show-sort-item`);
+	sortArrow.classList.toggle(`rotate-arrow`);
 })
+
+const sortPriceDown = document.querySelector(`.select__item_price_down`);
+const sortPriceUp = document.querySelector(`.select__item_price_up`);
+const sortPopular = document.querySelector(`.select__item_popular`);
+const sortRating = document.querySelector(`.select__item_rating`);
+
+
 sortPriceUp.addEventListener(`click`, function () {
+	mySortDown(`data-price`);
+	sortSelectItem.classList.remove(`show-sort-item`);
+	sortArrow.classList.remove(`rotate-arrow`);
+	sortSelectText.innerHTML = "По убыванию цены"
+})
+sortPriceDown.addEventListener(`click`, function () {
 	mySortUp(`data-price`);
+	sortSelectItem.classList.remove(`show-sort-item`);
+	sortArrow.classList.remove(`rotate-arrow`);
+	sortSelectText.innerHTML = "По увеличению цены"
+})
+
+
+sortPopular.addEventListener(`click`, function () {
+	mySortDown(`data-popular`)
+	sortSelectItem.classList.remove(`show-sort-item`);
+	sortArrow.classList.remove(`rotate-arrow`);
+	sortSelectText.innerHTML = "По популярности";
+});
+
+sortRating.addEventListener(`click`, function () {
+	mySortDown(`data-rating`);
+	sortSelectItem.classList.remove(`show-sort-item`);
+	sortArrow.classList.remove(`rotate-arrow`);
+	sortSelectText.innerHTML = "По рейтингу";
 })
 
 function mySortDown(sortType) {
-	const items = document.querySelector(`.knife__items`)
+	const items = document.querySelector(`.catalog__grid`)
 	for (let i = 0; i < items.children.length; i++) {
 		for (let j = i; j < items.children.length; j++) {
 			if (+items.children[i].getAttribute(sortType) > +items.children[j].getAttribute(sortType)) {
@@ -38,7 +54,7 @@ function mySortDown(sortType) {
 	}
 }
 function mySortUp(sortType) {
-	const items = document.querySelector(`.knife__items`)
+	const items = document.querySelector(`.catalog__grid`)
 	for (let i = 0; i < items.children.length; i++) {
 		for (let j = i; j < items.children.length; j++) {
 			if (+items.children[i].getAttribute(sortType) < +items.children[j].getAttribute(sortType)) {
@@ -52,4 +68,3 @@ function mySortUp(sortType) {
 function insertAfter(elem, refElem) {
 	return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
 }
-

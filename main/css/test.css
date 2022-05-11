@@ -36,3 +36,20 @@
 	color: royalblue;
 	font-size: 22px;
 }
+
+.items__sort {
+	border: 3px solid black;
+	width: 300px;
+	font-size: 20px;
+}
+
+.sort__item {
+	display: none;
+	border: 3px solid black;
+	width: 300px;
+	font-size: 20px;
+}
+
+.show {
+	display: block;
+}
