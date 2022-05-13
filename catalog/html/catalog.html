@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="../../main/css/burger.css">
 	<link rel="stylesheet" href="../../css/sort.css">
 	<link rel="stylesheet" href="../../css/catalog-product.css">
+	<link rel="stylesheet" href="../css/nouislider.min.css">
+	<link rel="stylesheet" href="../../css/aside.css">
 </head>
 
 <body>
@@ -276,7 +278,32 @@
 					</div>
 				</div>
 				<div class="catalog">
-					<aside class="catalog__side"></aside>
+					<aside class="catalog__side">
+						<div class="side__title__price title">
+							Фильтр товаров
+						</div>
+						<div class="slider__price">
+							<div class="slider__price_title">
+								<p>Цена</p>
+								<img src="../img/sort/golden-arrow.svg" alt="" class="slider_range_arrow">
+							</div>
+							<div class="slider__box">
+								<div class="slider__price_inputs">
+									<label for="" class="slider__price_label">
+										<span class="slider__price_text">От</і>
+											<input type="number" min="100" max="20000" class="slider__pirce_input"
+												placeholder="100">
+									</label>
+									<label for="" class="slider__price_label slider__price_label_two">
+										<span class="slider__price_text">До</span>
+										<input type="number" min="100" max="20000"
+											class="slider__pirce_input slider__pirce_input_two" placeholder="20000">
+									</label>
+								</div>
+								<div class="slider__price_range"></div>
+							</div>
+						</div>
+					</aside>
 					<div class="catalog__grid">
 						<a class="catalog__item" href="#" data-price="1155" data-popular="1" data-rating="11">
 							<div class="catalog__img">
@@ -811,6 +838,8 @@
 	</div>
 	<script src="../js/catalog.js"></script>
 	<script src="../js/sorted.js"></script>
+	<script src="../js/nouislider.min.js"></script>
+	<script src="../js/slider-range.js"></script>
 </body>
 
 </html>
