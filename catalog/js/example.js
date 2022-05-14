@@ -72,3 +72,7 @@ function mySortUp(sortType) {
 function insertAfter(elem, refElem) {
 	return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
 }
+
+sliderRange.noUiSlider.on(`update`, function (values, handle) {
+	inputs[handle].value = Math.round(values[handle]);
+})
