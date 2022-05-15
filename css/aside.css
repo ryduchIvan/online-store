@@ -1,5 +1,9 @@
+.catalog__side {
+  width: 320px;
+}
+
 .side__title__price {
-  padding: 17px 15px;
+  padding: 17px 13px;
 }
 
 .title {
@@ -14,6 +18,7 @@
   margin-top: 25px;
   padding-left: 10px;
   padding-right: 10px;
+  cursor: pointer;
 }
 
 .slider__price_title {
@@ -71,6 +76,26 @@
   text-align: center;
 }
 
+.slider__length_input {
+  width: 50px;
+  text-align: center;
+}
+
+.slider__length_input_two {
+  width: 50px;
+  text-align: center;
+}
+
+.slider__alllength_input {
+  width: 50px;
+  text-align: center;
+}
+
+.slider__length_allinput_two {
+  width: 50px;
+  text-align: center;
+}
+
 .noUi-connect {
   background-color: black;
   border: none;
@@ -118,4 +143,10 @@
 .rotate-slider-arrow {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.slider__alllength {
+  margin-top: 30px;
 }

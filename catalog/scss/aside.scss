@@ -1,7 +1,9 @@
-.catalog__side {}
+.catalog__side {
+	width: 320px;
+}
 
 .side__title__price {
-	padding: 17px 15px;
+	padding: 17px 13px;
 }
 
 .title {
@@ -17,9 +19,11 @@
 	margin-top: 25px;
 	padding-left: 10px;
 	padding-right: 10px;
+	cursor: pointer;
 }
 
 .slider__price_title {
+
 	p {
 		font-size: 20px;
 		line-height: 1.2;
@@ -55,8 +59,30 @@
 	font-size: 14px;
 }
 
+.slider__price_label_length {}
+
 .slider__pirce_input {
 	border: none;
+	text-align: center;
+}
+
+.slider__length_input {
+	width: 50px;
+	text-align: center;
+}
+
+.slider__length_input_two {
+	width: 50px;
+	text-align: center;
+}
+
+.slider__alllength_input {
+	width: 50px;
+	text-align: center;
+}
+
+.slider__length_allinput_two {
+	width: 50px;
 	text-align: center;
 }
 
@@ -107,4 +133,9 @@
 
 .rotate-slider-arrow {
 	transform: rotate(180deg);
+	transition: all 0.5s ease;
+}
+
+.slider__alllength {
+	margin-top: 30px;
 }

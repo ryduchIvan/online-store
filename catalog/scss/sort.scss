@@ -143,6 +143,18 @@
 
 .rotate-arrow {
 	transform: rotate(0deg);
+	transition: all 0.3s ease;
+}
+
+.sort__select_title {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	cursor: pointer;
+}
+
+.sort__select_arrow {
+	transition: all 0.3s ease;
 }
 
 .select__item_popular {}

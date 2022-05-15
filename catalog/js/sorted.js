@@ -1,9 +1,10 @@
 const sortArrow = document.querySelector(`.sort__select_arrow`);
+const sortTitle = document.querySelector(`.sort__select_title`)
 const sortSelectItem = document.querySelector(`.select__item_all`);
 const sortSelect = document.querySelector(`.sort__select`);
 const sortSelectText = document.querySelector(`.sort__select_row_text`);
 
-sortArrow.addEventListener(`click`, function () {
+sortTitle.addEventListener(`click`, function () {
 	sortSelectItem.classList.toggle(`show-sort-item`);
 	sortArrow.classList.toggle(`rotate-arrow`);
 })
