@@ -43,3 +43,24 @@ goldTitle.addEventListener(`click`, function () {
 	goldArrow.classList.toggle(`rotate-checkbox-arrow`);
 	checkboxGold.classList.toggle(`show-checkbox-list`);
 })
+
+//Сортировка 
+
+const catalogItem = document.querySelectorAll(`.catalog__item`);
+const catalogSide = document.querySelector(`.catalog__side`);
+const catalogGrid = document.querySelector(`.catalog__grid`)
+const checkboxLabel = document.querySelector(`.checkbox__label`);
+catalogSide.addEventListener(`click`, (event) => {
+	if (event.target.tagName !== 'LABEL') {
+		return console.log(false);
+	}
+
+	let filterClass = event.target.dataset[`f`];
+
+	catalogItem.forEach((elem) => {
+		if (!elem.classList.contains(filterClass)) {
+			elem.classList.toggle(`hide`);
+			catalogGrid.classList.add(`new-grid`);
+		}
+	})
+})

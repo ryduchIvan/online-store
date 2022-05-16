@@ -10,7 +10,7 @@
 
 .catalog__grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
 	width: 100%;
 	row-gap: 15px;
 }
@@ -20,7 +20,8 @@
 	padding: 20px;
 	margin: 0px 0px 0px auto;
 	display: block;
-	width: 310px;
+	max-width: 310px;
+	max-height: 400px;
 }
 
 .catalog__img {
