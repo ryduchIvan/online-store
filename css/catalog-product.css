@@ -17,6 +17,8 @@
   display: grid;
   -ms-grid-columns: (minmax(310px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  -ms-grid-rows: (400px)[auto-fit];
+      grid-template-rows: repeat(auto-fit, 400px);
   width: 100%;
   row-gap: 15px;
 }

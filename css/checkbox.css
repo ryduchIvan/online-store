@@ -187,3 +187,15 @@
   -ms-grid-rows: (400px)[auto-fit];
       grid-template-rows: repeat(auto-fit, 400px);
 }
+
+.footer__one__title {
+  text-align: center;
+}
+
+.footer__one__desc {
+  text-align: left;
+}
+
+.footer__one__desc p {
+  margin-bottom: 20px;
+}

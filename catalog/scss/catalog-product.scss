@@ -11,6 +11,7 @@
 .catalog__grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+	grid-template-rows: repeat(auto-fit, 400px);
 	width: 100%;
 	row-gap: 15px;
 }

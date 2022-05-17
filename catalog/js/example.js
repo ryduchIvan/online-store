@@ -76,3 +76,4 @@ function insertAfter(elem, refElem) {
 sliderRange.noUiSlider.on(`update`, function (values, handle) {
 	inputs[handle].value = Math.round(values[handle]);
 })
+

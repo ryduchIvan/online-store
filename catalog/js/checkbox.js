@@ -46,21 +46,22 @@ goldTitle.addEventListener(`click`, function () {
 
 //Сортировка 
 
-const catalogItem = document.querySelectorAll(`.catalog__item`);
-const catalogSide = document.querySelector(`.catalog__side`);
-const catalogGrid = document.querySelector(`.catalog__grid`)
-const checkboxLabel = document.querySelector(`.checkbox__label`);
-catalogSide.addEventListener(`click`, (event) => {
-	if (event.target.tagName !== 'LABEL') {
-		return console.log(false);
+const catalogItem = document.querySelectorAll(`.catalog__item`);//внесли в коснтанту все карточки товара 
+const catalogSide = document.querySelector(`.catalog__side`);//внесли в консатнту сайд бар 
+const catalogGrid = document.querySelector(`.catalog__grid`);// внесли в коснтанту родителя карточек товара
+const checkboxLabel = document.querySelector(`.checkbox__label`);//внесли в костанту лейбел 
+catalogSide.addEventListener(`click`, (event) => {//на сайд бар повесили метод клик, функцию с параметром event 
+	if (event.target.tagName == 'LABEL') {// если мы кликайем на сайд бар и то на что мы кликним  label 
+		console.log(true);//выводим в консоль true
+
+		let filterClass = event.target.dataset[`f`];// получаем в переменую атрибут data-f
+		catalogItem.forEach((elem) => {//перебираем все товари 
+			if (!elem.classList.contains(filterClass)) {//если класс товара не включает value пременой 
+				elem.classList.toggle(`hide`);//тогда мы эти элементы скрываем 
+				catalogGrid.classList.add(`new-grid`);
+			}
+		})
+	} else {// если елемент на который мы кликнули не лейбел 
+		console.log(false);//выводим false
 	}
-
-	let filterClass = event.target.dataset[`f`];
-
-	catalogItem.forEach((elem) => {
-		if (!elem.classList.contains(filterClass)) {
-			elem.classList.toggle(`hide`);
-			catalogGrid.classList.add(`new-grid`);
-		}
-	})
 })

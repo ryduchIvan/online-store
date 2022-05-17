@@ -1,6 +1,7 @@
 const sliderRangeTitle = document.querySelector(`.slider__price_title`);
 const sliderRangeArrow = document.querySelector(`.slider_range_arrow`);
 const sliderRangeBox = document.querySelector(`.slider__box`);
+const filterButton = document.querySelector(`.button__filter`);
 
 sliderRangeTitle.addEventListener(`click`, function () {
 	sliderRangeBox.classList.toggle(`show-slider-inputs`);
@@ -29,6 +30,15 @@ if (sliderRange) {
 		//handle - сам ползунок ( 1 - 0 , 2 - 1)
 		inputs[handle].value = Math.round(values[handle]);//за первый инпут отвечает первый полузнок , за второй - второй 
 		//в каждый инпут мы передаем значение перемещение полузнка 
+		let sliderValue = inputs[0].value;
+		console.log(sliderValue);
+		filterButton.addEventListener(`click`, function () {
+			catalogItem.forEach(function (elem) {
+				if (sliderValue > +elem.dataset['price']) {
+					elem.classList.add(`hide`);
+				}
+			})
+		})
 	});
 
 	const setSliderRange = function (index, value) {// создаем функцию с 2 параметрами 
@@ -37,8 +47,20 @@ if (sliderRange) {
 		let arr = [null, null];//создали массив с null значением 
 		arr[index] = value;//передаем в массив значение инпута 
 		sliderRange.noUiSlider.set(arr);//вешаем на слайдер метод set и передаем слайдеру значения массива
-	}
+		let valueFilterOne = arr[0];
+		let valueFilterTwo = arr[1];
 
+		filterButton.addEventListener(`click`, function () {
+			catalogItem.forEach(function (elem) {
+				console.log(valueFilterOne);
+				console.log(valueFilterTwo);
+				if (valueFilterOne > +elem.dataset['price']) {
+					elem.classList.add(`hide`);
+				}
+			})
+		})
+
+	}
 	inputs.forEach(function (e, index) {//на инпуты вешаем функцию с 2 параметрами 
 		//index - значение length инпута 
 		//el - сам инпут 
@@ -204,3 +226,8 @@ if (sliderRangeFour) {
 		})
 	})
 }
+
+
+
+
+
