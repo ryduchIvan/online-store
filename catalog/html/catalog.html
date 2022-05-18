@@ -19,6 +19,8 @@
 	<link rel="stylesheet" href="../../css/checkbox.css">
 	<link rel="stylesheet" href="../../main/css/footer.css">
 	<link rel="stylesheet" href="../../main/css/adaptive-footer.css">
+	<link rel="stylesheet" href="../../css/adaptive-knife.css">
+	<link rel="stylesheet" href="../../css/adaptive-sidebar.css">
 </head>
 
 <body>
@@ -269,20 +271,27 @@
 							<span>Разделочные ножи</span>
 						</div>
 					</div>
-					<div class="sort__select">
-						<div class="sort__select_title">
-							<p class="sort__select_row_text">По популярнсоти</p>
-							<img src="../../catalog/img/sort/arrow_sort.svg" alt="" class="sort__select_arrow">
-						</div>
-						<div class="select__item_all">
-							<div class="select__item select__item_price_up">По увеличению цены</div>
-							<div class="select__item select__item_price_down">По убыванию цены</div>
-							<div class="select__item select__item_popular">По популярнсоти</div>
-							<div class="select__item select__item_rating">По рейтингу</div>
+					<div class="select__desktop">
+						<div class="sort__select sort-hide">
+							<div class="sort__select_title">
+								<p class="sort__select_row_text">По популярнсоти</p>
+								<img src="../../catalog/img/sort/arrow_sort.svg" alt="" class="sort__select_arrow">
+							</div>
+							<div class="select__item_all select-hide">
+								<div class="select__item select__item_price_up">По увеличению цены</div>
+								<div class="select__item select__item_price_down">По убыванию цены</div>
+								<div class="select__item select__item_popular">По популярнсоти</div>
+								<div class="select__item select__item_rating">По рейтингу</div>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="catalog">
+					<div class="sidebar__title">
+						<p>Филтры
+							<img src="../../main/img/icon/gold-arrow.svg" alt="" class="sidebar__title_arrow">
+						</p>
+					</div>
 					<aside class="catalog__side">
 						<div class="side__title__price title">
 							Фильтр товаров
@@ -294,19 +303,19 @@
 							</div>
 							<div class="slider__box">
 								<div class="slider__price_inputs">
-									<label for="" class="slider__price_label">
+									<label for="" class="slider__price_label change_input">
 										<span class="slider__price_text">От</і>
 											<input type="number" min="100" max="20000" class="slider__pirce_input"
 												placeholder="100">
 									</label>
-									<label for="" class="slider__price_label slider__price_label_two">
+									<label for="" class="slider__price_label slider__price_label_two change_input">
 										<span class="slider__price_text">До</span>
 										<input type="number" min="100" max="20000"
 											class="slider__pirce_input slider__pirce_input_two" placeholder="20000">
 									</label>
 								</div>
 								<div class="slider__price_range"></div>
-								<button class="button__filter">Отфилтровать</button>
+								<a class="button__filter">Отфилтровать</a>
 							</div>
 						</div>
 						<div class="product__title title">
@@ -747,7 +756,7 @@
 							</div>
 							<div class="slider__box slider__box_two">
 								<div class="slider__price_inputs">
-									<label for="" class="slider__price_label ">
+									<label for="" class="slider__price_label">
 										<input type="number" min="10" max="20000"
 											class="slider__pirce_input slider__length_input" placeholder="10">
 										<span class="slider__price_text">ММ</span>
@@ -760,6 +769,7 @@
 									</label>
 								</div>
 								<div class="slider__price_range slider__price_range_two"></div>
+								<a class="button__filter">Отфилтровать</a>
 							</div>
 						</div>
 						<div class="slider__price slider__alllength">
@@ -783,6 +793,7 @@
 									</label>
 								</div>
 								<div class="slider__price_range slider__price_range_three"></div>
+								<a class="button__filter">Отфилтровать</a>
 							</div>
 						</div>
 						<div class="slider__price slider__width">
@@ -806,9 +817,27 @@
 									</label>
 								</div>
 								<div class="slider__price_range slider__price_range_four"></div>
+								<a class="button__filter">Отфилтровать</a>
 							</div>
 						</div>
 					</aside>
+					<div class="sort__select_mobile">
+						<div class="select__mobile">
+							<div class="sort__select sort__select_mobile">
+								<div class="sort__select_title sort__select_title_mobile">
+									<p class="sort__select_row_text sort__select_row_text_mobile">По популярнсоти</p>
+									<img src="../../catalog/img/sort/arrow_sort.svg" alt=""
+										class="sort__select_arrow sort__select_arrow_mobile">
+								</div>
+								<div class=" select__item_all select__item_all_mobile ">
+									<div class="select__item select__item_price_up">По увеличению цены</div>
+									<div class="select__item select__item_price_down">По убыванию цены</div>
+									<div class="select__item select__item_popular">По популярнсоти</div>
+									<div class="select__item select__item_rating">По рейтингу</div>
+								</div>
+							</div>
+						</div>
+					</div>
 					<div class="catalog__grid">
 						<a class="catalog__item AiR nikon zlatko 100x13m rwl-34 Mercorne grab cap stall latyn zolot-2"
 							href="#" data-price="1155" data-popular="1" data-rating="11">
@@ -1506,6 +1535,7 @@
 	<script src="../js/nouislider.min.js"></script>
 	<script src="../js/slider-range.js"></script>
 	<script src="../js/checkbox.js"></script>
+	<script src="../js/adaptive.js"></script>
 </body>
 
 </html>
