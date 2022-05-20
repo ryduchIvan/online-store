@@ -1,44 +1,44 @@
-const sortArrowMobile = document.querySelectorAll(`.sort__select_arrow_mobile`);
-const sortTitleMobile = document.querySelectorAll(`.sort__select_title_mobile`)
-const sortSelectItemMobile = document.querySelectorAll(`.select__item_all_mobile`);
-const sortSelectMobile = document.querySelectorAll(`.sort__select_mobile`);
+const sortTitleMobile = document.querySelector(`.sort__select_title_mobile`);
+const sortSelectItemMobile = document.querySelector(`.select__item_all_mobile`);
+const sortSelectMobile = document.querySelector(`.sort__select_mobile`);
 const sortSelectTextMobile = document.querySelector(`.sort__select_row_text_mobile`);
+const sortSelectArrowMobile = document.querySelector(`.sort__select_arrow_mobile`);
 
 sortTitleMobile.addEventListener(`click`, function () {
 	sortSelectItemMobile.classList.toggle(`show-sort-item`);
-	sortArrowMobile.classList.toggle(`rotate-arrow`);
+	sortSelectArrowMobile.classList.toggle(`rotate-arrow`);
 })
 
-const sortPriceDown = document.querySelector(`.select__item_price_down`);
-const sortPriceUp = document.querySelector(`.select__item_price_up`);
-const sortPopular = document.querySelector(`.select__item_popular`);
-const sortRating = document.querySelector(`.select__item_rating`);
+const sortPriceDownMobile = document.querySelector(`.select__item_price_down_m`);
+const sortPriceUpMobile = document.querySelector(`.select__item_price_up_m`);
+const sortPopularMobile = document.querySelector(`.select__item_popular_m`);
+const sortRatingMobile = document.querySelector(`.select__item_rating_m`);
 
 
-sortPriceUp.addEventListener(`click`, function () {
+sortPriceUpMobile.addEventListener(`click`, function () {
 	mySortDown(`data-price`);
-	sortSelectItem.classList.remove(`show-sort-item`);
+	sortSelectItemMobile.classList.remove(`show-sort-item`);
 	sortArrow.classList.remove(`rotate-arrow`);
-	sortSelectText.innerHTML = "По убыванию цены"
+	sortSelectTextMobile.innerHTML = "По убыванию цены"
 })
-sortPriceDown.addEventListener(`click`, function () {
+sortPriceDownMobile.addEventListener(`click`, function () {
 	mySortUp(`data-price`);
-	sortSelectItem.classList.remove(`show-sort-item`);
+	sortSelectItemMobile.classList.remove(`show-sort-item`);
 	sortArrow.classList.remove(`rotate-arrow`);
-	sortSelectText.innerHTML = "По увеличению цены"
+	sortSelectTextMobile.innerHTML = "По увеличению цены"
 })
 
 
-sortPopular.addEventListener(`click`, function () {
+sortPopularMobile.addEventListener(`click`, function () {
 	mySortDown(`data-popular`)
-	sortSelectItem.classList.remove(`show-sort-item`);
+	sortSelectItemMobile.classList.remove(`show-sort-item`);
 	sortArrow.classList.remove(`rotate-arrow`);
-	sortSelectText.innerHTML = "По популярности";
+	sortSelectTextMobile.innerHTML = "По популярности";
 });
 
-sortRating.addEventListener(`click`, function () {
+sortRatingMobile.addEventListener(`click`, function () {
 	mySortDown(`data-rating`);
-	sortSelectItem.classList.remove(`show-sort-item`);
+	sortSelectItemMobile.classList.remove(`show-sort-item`);
 	sortArrow.classList.remove(`rotate-arrow`);
-	sortSelectText.innerHTML = "По рейтингу";
+	sortSelectTextMobile.innerHTML = "По рейтингу";
 })

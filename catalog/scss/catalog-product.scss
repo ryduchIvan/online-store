@@ -9,20 +9,18 @@
 }
 
 .catalog__grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-	grid-template-rows: repeat(auto-fit, 400px);
+	display: flex;
+	flex-wrap: wrap;
+	//grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+	//grid-template-rows: repeat(auto-fit, 400px);
 	width: 100%;
-	row-gap: 15px;
 }
 
 .catalog__item {
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 	padding: 20px;
 	margin: 0px 0px 0px auto;
-	display: block;
-	max-width: 310px;
-	max-height: 400px;
+	flex: 0 1 32%;
 }
 
 

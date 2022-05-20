@@ -84,7 +84,7 @@
 	border: 1px solid rgba(4, 4, 4, 0.3);
 	height: 40px;
 	color: rgba(0, 0, 0, 0.5);
-	z-index: 3;
+	z-index: 2;
 	background-color: white;
 	position: relative;
 	display: flex;
@@ -115,6 +115,10 @@
 	border: 1px solid rgba(4, 4, 4, 0.3);
 	border-radius: 3px;
 	display: none;
+}
+
+.show-sort-item {
+	display: block;
 }
 
 .select__item {

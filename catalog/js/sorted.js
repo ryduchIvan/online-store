@@ -3,20 +3,16 @@ const sortTitle = document.querySelector(`.sort__select_title`)
 const sortSelectItem = document.querySelector(`.select__item_all`);
 const sortSelect = document.querySelector(`.sort__select`);
 const sortSelectText = document.querySelector(`.sort__select_row_text`);
+console.log(sortTitle);
+console.log(sortSelectItem);
+
+sortTitle.addEventListener(`click`, function () {
+	sortSelectItem.classList.toggle(`show-select-item`);
+})
 
 sortTitle.addEventListener(`click`, function () {
 	sortSelectItem.classList.toggle(`show-sort-item`);
 	sortArrow.classList.toggle(`rotate-arrow`);
-})
-const sortArrowMobile = document.querySelector(`.sort__select_arrow_mobile`);
-const sortTitleMobile = document.querySelector(`.sort__select_title_mobile`)
-const sortSelectItemMobile = document.querySelector(`.select__item_all_mobile`);
-const sortSelectMobile = document.querySelector(`.sort__select_mobile`);
-const sortSelectTextMobile = document.querySelector(`.sort__select_row_text_mobile`);
-
-sortTitleMobile.addEventListener(`click`, function () {
-	sortSelectItemMobile.classList.toggle(`show-sort-item`);
-	sortArrowMobile.classList.toggle(`rotate-arrow`);
 })
 const sortPriceDown = document.querySelector(`.select__item_price_down`);
 const sortPriceUp = document.querySelector(`.select__item_price_up`);
