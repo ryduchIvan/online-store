@@ -46,15 +46,21 @@ imageCover.addEventListener(`click`, function () {
 })
 
 //close popup
-const imgPopup = document.querySelector(`.img_popup`);
+const imgPopup = document.querySelectorAll(`.img_popup`);
 
 popup.addEventListener(`click`, function (event) {
-	if ((event.target.classList !== popupPrev.classList) && (event.target.classList !== popupNext.classList) && (event.target.classList !== imgPopup.classList)) {
+	if ((event.target.classList !== popupPrev.classList) && (event.target.classList !== popupNext.classList) && (event.target.tagName !== `IMG`)) {
 		body.classList.remove(`lock-body`);
 		popup.classList.remove(`open-popup`);
 	}
 	console.log(event.target.classList);
 	console.log(event.target);
+	console.log(event.target.tagName);
 })
 
+const popupClose = document.querySelector(`.popup__close`);
 
+popupClose.addEventListener(`click`, function () {
+	body.classList.remove(`lock-body`);
+	popup.classList.remove(`open-popup`);
+})
