@@ -40,7 +40,38 @@ function rollPopup() {
 
 const imageCover = document.querySelector(`.images__cover`);
 const popup = document.querySelector(`.popup`);
+const imgItemOne = document.querySelector(`.add_one`);
+const imgItemTwo = document.querySelector(`.add_two`);
+const imgItemThree = document.querySelector(`.add_three`);
+const imgItemFour = document.querySelector(`.add_four`);
 imageCover.addEventListener(`click`, function () {
+	popupCount = 0;
+	rollPopup();
+	body.classList.add(`lock-body`);
+	popup.classList.add(`open-popup`);
+})
+
+imgItemOne.addEventListener(`click`, function () {
+	popupCount = 1;
+	rollPopup();
+	body.classList.add(`lock-body`);
+	popup.classList.add(`open-popup`);
+})
+imgItemTwo.addEventListener(`click`, function () {
+	popupCount = 2;
+	rollPopup();
+	body.classList.add(`lock-body`);
+	popup.classList.add(`open-popup`);
+})
+imgItemThree.addEventListener(`click`, function () {
+	popupCount = 3;
+	rollPopup();
+	body.classList.add(`lock-body`);
+	popup.classList.add(`open-popup`);
+})
+imgItemFour.addEventListener(`click`, function () {
+	popupCount = 4;
+	rollPopup();
 	body.classList.add(`lock-body`);
 	popup.classList.add(`open-popup`);
 })
@@ -48,14 +79,12 @@ imageCover.addEventListener(`click`, function () {
 //close popup
 const imgPopup = document.querySelectorAll(`.img_popup`);
 
+
 popup.addEventListener(`click`, function (event) {
 	if ((event.target.classList !== popupPrev.classList) && (event.target.classList !== popupNext.classList) && (event.target.tagName !== `IMG`)) {
 		body.classList.remove(`lock-body`);
 		popup.classList.remove(`open-popup`);
 	}
-	console.log(event.target.classList);
-	console.log(event.target);
-	console.log(event.target.tagName);
 })
 
 const popupClose = document.querySelector(`.popup__close`);
