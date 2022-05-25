@@ -3,12 +3,21 @@ const mainSelect = document.querySelectorAll(`.main__select`);
 const mainSelectArrow = document.querySelector(`.button__select_arrow`);
 const selectBox = document.querySelectorAll(`.select__box`);
 const selectButton = document.querySelectorAll(`.button__select`);
+const selectItem = document.querySelectorAll(`.select__item`);
+const selectTitle = document.querySelectorAll(`.title__select`);
 
 mainSelect.forEach(function (elem) {
 	elem.addEventListener(`click`, function () {
 		elem.nextElementSibling.classList.toggle(`show-select-box`);
 		elem.childNodes[3].childNodes[1].classList.toggle(`rotate-arrow-select`);
 	})
+})
+selectItem.forEach(function (item) {
+	item.addEventListener(`click`, function () {
+		item.parentNode.parentNode.previousElementSibling.childNodes[1].innerHTML = itemText;
+	})
+	let itemText = item.textContent;
+	console.log(itemText);
 })
 
 //calc

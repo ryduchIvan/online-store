@@ -18,6 +18,7 @@
 	padding-bottom: 15px;
 	margin-right: 20px;
 	position: relative;
+	cursor: pointer;
 
 	&::after {
 		content: "";
@@ -39,7 +40,7 @@
 
 .slider__text_line {
 	display: flex;
-	transition: all 3s ease;
+	transition: all 0.3s ease;
 }
 
 .slider__text_item {
