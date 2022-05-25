@@ -14,7 +14,6 @@ mainSelect.forEach(function (elem) {
 		elem.childNodes[3].childNodes[1].classList.toggle(`rotate-arrow-select`);
 	})
 })
-
 selectItem.forEach(function (item) {
 	item.addEventListener(`click`, function (event) {
 		item.parentNode.parentNode.previousElementSibling.childNodes[1].innerHTML = itemText;
@@ -75,4 +74,29 @@ bag.addEventListener(`mouseover`, function (event) {
 })
 
 //colse select
+const sliderTextItemT = document.querySelector(`.slider__text_item`)
+main.addEventListener(`click`, function (event) {
+	if ((event.target.classList[0] == `main`)) {
+		selectBox.forEach(function (elem) {
+			elem.classList.remove(`show-select-box`);
+		})
+		console.log(true);
+	}
+})
 
+main.addEventListener(`click`, function (event) {
+	if ((event.target.classList[0] == `about__select`)) {
+		selectBox.forEach(function (elem) {
+			elem.classList.remove(`show-select-box`);
+		})
+		console.log(true);
+	}
+})
+
+//sliderTextItemT.addEventListener(`click`, function (event) {
+//	if (event.target.classList[0] == `about__select_select`) {
+//		selectBox.forEach(function (elem) {
+//			elem.classList.remove(`show-select-box`);
+//		})
+//	}
+//})
