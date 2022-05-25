@@ -210,6 +210,21 @@
   font-family: 'Semibold';
 }
 
+.country__item {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.country__item:hover {
+  background-color: black;
+  color: white;
+}
+
+.main__select_slider {
+  margin-left: 150px;
+  position: relative;
+}
+
 .show-after:after {
   width: 100%;
 }

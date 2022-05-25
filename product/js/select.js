@@ -1,25 +1,28 @@
 //select
 const mainSelect = document.querySelectorAll(`.main__select`);
+const mainSelec = document.querySelector(`.main__select`);
 const mainSelectArrow = document.querySelector(`.button__select_arrow`);
 const selectBox = document.querySelectorAll(`.select__box`);
 const selectButton = document.querySelectorAll(`.button__select`);
 const selectItem = document.querySelectorAll(`.select__item`);
 const selectTitle = document.querySelectorAll(`.title__select`);
 const countryItems = document.querySelectorAll(`.country__item`)
+const main = document.querySelector(`.main`);
 mainSelect.forEach(function (elem) {
 	elem.addEventListener(`click`, function () {
 		elem.nextElementSibling.classList.toggle(`show-select-box`);
 		elem.childNodes[3].childNodes[1].classList.toggle(`rotate-arrow-select`);
 	})
 })
+
 selectItem.forEach(function (item) {
 	item.addEventListener(`click`, function (event) {
 		item.parentNode.parentNode.previousElementSibling.childNodes[1].innerHTML = itemText;
-		let selectClass = event.target.dataset[`country`];
-		console.log(selectClass);
+		let countryClass = event.target.dataset[`country`];
+		console.log(countryClass);
 		countryItems.forEach(function (elem) {
 			elem.classList.remove(`hide`);
-			if (!elem.classList.contains(selectClass)) {
+			if (!elem.classList.contains(countryClass)) {
 				elem.classList.add(`hide`);
 			}
 		})
@@ -70,3 +73,6 @@ bag.addEventListener(`mouseover`, function (event) {
 		bonustText.classList.remove(`show-bonus-text`);
 	}
 })
+
+//colse select
+
