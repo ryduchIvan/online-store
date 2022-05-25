@@ -5,7 +5,7 @@ const selectBox = document.querySelectorAll(`.select__box`);
 const selectButton = document.querySelectorAll(`.button__select`);
 const selectItem = document.querySelectorAll(`.select__item`);
 const selectTitle = document.querySelectorAll(`.title__select`);
-
+const countryItems = document.querySelectorAll(`.country__item`)
 mainSelect.forEach(function (elem) {
 	elem.addEventListener(`click`, function () {
 		elem.nextElementSibling.classList.toggle(`show-select-box`);
@@ -13,11 +13,18 @@ mainSelect.forEach(function (elem) {
 	})
 })
 selectItem.forEach(function (item) {
-	item.addEventListener(`click`, function () {
+	item.addEventListener(`click`, function (event) {
 		item.parentNode.parentNode.previousElementSibling.childNodes[1].innerHTML = itemText;
+		let selectClass = event.target.dataset[`country`];
+		console.log(selectClass);
+		countryItems.forEach(function (elem) {
+			elem.classList.remove(`hide`);
+			if (!elem.classList.contains(selectClass)) {
+				elem.classList.add(`hide`);
+			}
+		})
 	})
 	let itemText = item.textContent;
-	console.log(itemText);
 })
 
 //calc

@@ -213,3 +213,7 @@
 .show-after:after {
   width: 100%;
 }
+
+.hide {
+  display: none;
+}
