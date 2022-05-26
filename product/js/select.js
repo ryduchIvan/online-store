@@ -1,21 +1,26 @@
 //select
 const mainSelect = document.querySelectorAll(`.main__select`);
 const mainSelec = document.querySelector(`.main__select`);
-const mainSelectArrow = document.querySelector(`.button__select_arrow`);
+const mainSelectArrow = document.querySelectorAll(`.button__select_arrow`);
 const selectBox = document.querySelectorAll(`.select__box`);
 const selectButton = document.querySelectorAll(`.button__select`);
 const selectItem = document.querySelectorAll(`.select__item`);
 const selectTitle = document.querySelectorAll(`.title__select`);
 const countryItems = document.querySelectorAll(`.country__item`)
 const main = document.querySelector(`.main`);
+
 mainSelect.forEach(function (elem) {
 	elem.addEventListener(`click`, function () {
 		elem.nextElementSibling.classList.toggle(`show-select-box`);
 		elem.childNodes[3].childNodes[1].classList.toggle(`rotate-arrow-select`);
+		console.log(elem.nextElementSibling.classList);
 	})
 })
 selectItem.forEach(function (item) {
 	item.addEventListener(`click`, function (event) {
+		selectBox.forEach(function (elem) {
+			elem.classList.remove(`show-select-box`);
+		})
 		item.parentNode.parentNode.previousElementSibling.childNodes[1].innerHTML = itemText;
 		let countryClass = event.target.dataset[`country`];
 		console.log(countryClass);
@@ -73,30 +78,35 @@ bag.addEventListener(`mouseover`, function (event) {
 	}
 })
 
-//colse select
-const sliderTextItemT = document.querySelector(`.slider__text_item`)
-main.addEventListener(`click`, function (event) {
-	if ((event.target.classList[0] == `main`)) {
-		selectBox.forEach(function (elem) {
-			elem.classList.remove(`show-select-box`);
-		})
-		console.log(true);
-	}
-})
-
-main.addEventListener(`click`, function (event) {
-	if ((event.target.classList[0] == `about__select`)) {
-		selectBox.forEach(function (elem) {
-			elem.classList.remove(`show-select-box`);
-		})
-		console.log(true);
-	}
-})
-
-//sliderTextItemT.addEventListener(`click`, function (event) {
-//	if (event.target.classList[0] == `about__select_select`) {
+//const sliderTextItemT = document.querySelector(`.slider__text_item`)
+//main.addEventListener(`click`, function (event) {
+//	if ((event.target.classList[0] == `about__select`)) {
 //		selectBox.forEach(function (elem) {
 //			elem.classList.remove(`show-select-box`);
 //		})
+//		console.log(true);
 //	}
 //})
+
+//main.addEventListener(`click`, function (event) {
+//	if ((event.target.classList[0] == `about__select`)) {
+//		selectBox.forEach(function (elem) {
+//			elem.classList.remove(`show-select-box`);
+//		})
+//		console.log(true);
+//	}
+//})
+
+//const sliderBoxText = document.querySelector(`.slider__text_box`);
+//console.log(sliderBoxText);
+
+body.addEventListener(`click`, function (event) {
+	if ((event.target.classList[0] != `main__select`) && (event.target.classList[0] != `select__item`) && (event.target.classList[0] != `title__select`) && (event.target.classList[0] != `button__select`) && (event.target.classList[0] != `button__select_arrow`)) {
+		selectBox.forEach(function (elem) {
+			elem.classList.remove(`show-select-box`);
+		})
+		mainSelectArrow.forEach(function (arrow) {
+			arrow.classList.remove(`rotate-arrow-select`)
+		})
+	}
+})

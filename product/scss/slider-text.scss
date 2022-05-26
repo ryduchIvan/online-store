@@ -40,7 +40,7 @@
 .slider__text_box {
 	width: 100%;
 	overflow: hidden;
-	height: 100%;
+	height: auto;
 	padding-top: 30px;
 }
 
@@ -54,6 +54,7 @@
 	line-height: 1.5;
 	color: #141414;
 	width: 100%;
+	height: auto;
 }
 
 .slider__text__content {
@@ -242,11 +243,15 @@
 	margin-left: 140px;
 }
 
+.about__select_select {
+	max-width: 400px;
+}
+
 .about__select_select_name_two {}
 
 //js class
 .show-after {
-	&:after {
+	&::after {
 		width: 100%;
 	}
 }
