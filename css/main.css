@@ -148,7 +148,7 @@
 }
 
 .about__disc_box {
-  max-width: 350px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,6 +168,7 @@
 
 .about__disc_name {
   color: #14141470;
+  text-align: right;
 }
 
 .about__disc_name li {

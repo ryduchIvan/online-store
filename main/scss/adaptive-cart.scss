@@ -1,0 +1,145 @@
+@media(min-width:1024px) {
+	.about__button_adp {
+		display: none;
+	}
+}
+
+@media(max-width:1024px) {
+	.main__row {
+		display: flex;
+		flex-direction: column;
+		margin: 0px auto;
+	}
+
+	.main__images {
+		width: 70%;
+		margin: 0px auto;
+	}
+
+	.images__cover {
+		img {
+			object-fit: fill;
+		}
+	}
+
+	.about__button_adp {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 12px;
+		background-color: black;
+		border-radius: 5px;
+		margin: 0px auto;
+		margin-bottom: 20px;
+	}
+
+	.about__button_adp_text {
+		color: white;
+		font-size: 16px;
+		font-family: 'Semibold';
+	}
+
+	.about__button_images {
+		margin-left: 25px;
+		transition: all 0.3s linear;
+	}
+
+	.about__disc_box {
+		display: none;
+	}
+
+	.about__select {
+		display: none;
+	}
+}
+
+@media(max-width:800px) {
+	.main__images {
+		width: 90%;
+		margin: 0px auto;
+	}
+}
+
+@media(min-width:600px) {
+	.images__cover_line {
+		display: none;
+	}
+}
+
+@media(max-width:600px) {
+	.main__images {
+		width: 100%;
+		margin: 0px auto;
+	}
+
+	.main__container {
+		padding: 0px;
+	}
+
+	.images__add {
+		display: none;
+	}
+
+	.images__cover_desktop {
+		display: none;
+	}
+
+	.images__cover_line {
+		display: flex;
+		transition: all 0.3s linear;
+	}
+
+	.images__cover {
+		overflow: hidden;
+		height: 400px;
+	}
+
+	.images__cover__item {
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.adp__buttons_slider {
+		width: 120px;
+		height: 10px;
+		display: flex;
+		justify-content: space-between;
+		margin: 0px auto;
+		margin-top: -35px;
+		position: relative;
+	}
+
+	.adp__button_slider {
+		width: 10px;
+		height: 100%;
+		background-color: black;
+		border-radius: 50%;
+	}
+
+	.bag__finish_buy {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.buy_onte_click {
+		margin-top: 10px;
+	}
+}
+
+//js class
+.show-hiden-select {
+	display: flex;
+}
+
+.rotate-arrow-adp {
+	transform: rotate(90deg);
+	transition: all 0.3s linear;
+}
+
+.new-style-button {
+	background-color: #E8AA31;
+}

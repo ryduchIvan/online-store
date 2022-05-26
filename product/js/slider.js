@@ -96,22 +96,7 @@ hiteSlideThree.addEventListener(`click`, function () {
 	hiteScroll = 2;
 	hiteTransform();
 })
-hiteSlideFour.addEventListener(`click`, function () {
-	hiteSlideOne.classList.remove(`hite-new-style`);
-	hiteSlideTwo.classList.remove(`hite-new-style`);
-	hiteSlideThree.classList.remove(`hite-new-style`)
 
-	hiteScroll = 3;
-	hiteTransform();
-})
-hiteSlideFight.addEventListener(`click`, function () {
-	hiteSlideOne.classList.remove(`hite-new-style`);
-	hiteSlideTwo.classList.remove(`hite-new-style`);
-	hiteSlideThree.classList.remove(`hite-new-style`)
-
-	hiteScroll = 4;
-	hiteTransform();
-})
 function hiteTransform() {
 	hiteLine.style.transform = 'translate(-' + hiteScroll * widthHite + 'px)';
 }

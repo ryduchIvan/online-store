@@ -123,7 +123,7 @@
 }
 
 .about__disc_box {
-	max-width: 350px;
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	font-size: 14px;
@@ -139,6 +139,8 @@
 
 .about__disc_name {
 	color: #14141470;
+
+	text-align: right;
 
 	li {
 		margin-bottom: 10px;
