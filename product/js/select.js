@@ -8,7 +8,7 @@ const selectItem = document.querySelectorAll(`.select__item`);
 const selectTitle = document.querySelectorAll(`.title__select`);
 const countryItems = document.querySelectorAll(`.country__item`)
 const main = document.querySelector(`.main`);
-
+const selectMail = document.querySelector(`.select__mail`);
 mainSelect.forEach(function (elem) {
 	elem.addEventListener(`click`, function () {
 		elem.nextElementSibling.classList.toggle(`show-select-box`);
@@ -33,7 +33,13 @@ selectItem.forEach(function (item) {
 	})
 	let itemText = item.textContent;
 })
-
+countryItems.forEach(function (elem) {
+	elem.addEventListener(`click`, function () {
+		selectMail.classList.toggle(`show-select-mail`);
+		let mailHeight = selectMail.offsetHeight;
+		sliderTextBox.style.height = sliderHeightFour.offsetHeight + mailHeight + 'px';
+	})
+})
 //calc
 const plus = document.querySelector(`.bag__finihs_plus`);
 console.log(plus);
@@ -77,29 +83,7 @@ bag.addEventListener(`mouseover`, function (event) {
 		bonustText.classList.remove(`show-bonus-text`);
 	}
 })
-
-//const sliderTextItemT = document.querySelector(`.slider__text_item`)
-//main.addEventListener(`click`, function (event) {
-//	if ((event.target.classList[0] == `about__select`)) {
-//		selectBox.forEach(function (elem) {
-//			elem.classList.remove(`show-select-box`);
-//		})
-//		console.log(true);
-//	}
-//})
-
-//main.addEventListener(`click`, function (event) {
-//	if ((event.target.classList[0] == `about__select`)) {
-//		selectBox.forEach(function (elem) {
-//			elem.classList.remove(`show-select-box`);
-//		})
-//		console.log(true);
-//	}
-//})
-
-//const sliderBoxText = document.querySelector(`.slider__text_box`);
-//console.log(sliderBoxText);
-
+//close
 body.addEventListener(`click`, function (event) {
 	if ((event.target.classList[0] != `main__select`) && (event.target.classList[0] != `select__item`) && (event.target.classList[0] != `title__select`) && (event.target.classList[0] != `button__select`) && (event.target.classList[0] != `button__select_arrow`)) {
 		selectBox.forEach(function (elem) {

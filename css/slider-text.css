@@ -1,15 +1,7 @@
 @charset "UTF-8";
-.out {
-  width: 100%;
-  height: 100%;
-  border: 1px solid red;
-}
-
 .slider__text_container {
-  margin-top: 100px;
-  background: #FEFEFE;
-  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 80px;
+  margin-bottom: 100px;
 }
 
 .slider__text_buttons {
@@ -17,6 +9,10 @@
   display: -ms-flexbox;
   display: flex;
   border-bottom: 2px solid rgba(20, 20, 20, 0.15);
+  background-color: #FEFEFE;
+  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  padding-left: 15px;
 }
 
 .slider__text_button {
@@ -40,8 +36,12 @@
 .slider__text_box {
   width: 100%;
   overflow: hidden;
-  height: auto;
-  padding-top: 30px;
+  padding-top: 15px;
+  padding-left: 15px;
+  background: #FEFEFE;
+  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  height: 300px;
 }
 
 .slider__text_line {
@@ -57,7 +57,18 @@
   line-height: 1.5;
   color: #141414;
   width: 100%;
-  height: auto;
+}
+
+.slider__text_item_one {
+  max-height: 300px;
+}
+
+.slider__text_item_two {
+  max-height: 180px;
+}
+
+.slider__text_item_four {
+  max-height: 200px;
 }
 
 .slider__text__content {
@@ -270,10 +281,70 @@
   max-width: 400px;
 }
 
+.select__mail {
+  width: 600px;
+  display: none;
+}
+
+.select__mail_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.select__mail_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.select__mail_item img {
+  width: 200px;
+  height: 100px;
+}
+
+.select__mail_date {
+  font-family: 'Bold';
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+.select__mail_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  margin-right: 20px;
+  font-family: 'Bold';
+}
+
+.select__mail_price {
+  font-size: 18px;
+}
+
+.hite_new-style {
+  width: 200px;
+}
+
 .show-after::after {
   width: 100%;
 }
 
 .hide {
   display: none;
+}
+
+.show-select-mail {
+  display: block;
+  padding-top: 30px;
 }

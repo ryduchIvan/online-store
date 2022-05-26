@@ -1,15 +1,8 @@
-.out {
-	width: 100%;
-	height: 100%;
-	border: 1px solid red;
-}
-
 .slider__text {}
 
 .slider__text_container {
-	margin-top: 100px;
-	background: #FEFEFE;
-	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+	margin-top: 80px;
+	margin-bottom: 100px;
 }
 
 .container {}
@@ -17,6 +10,9 @@
 .slider__text_buttons {
 	display: flex;
 	border-bottom: 2px solid rgba(20, 20, 20, 0.15);
+	background-color: #FEFEFE;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+	padding-left: 15px;
 }
 
 .slider__text_button {
@@ -40,8 +36,11 @@
 .slider__text_box {
 	width: 100%;
 	overflow: hidden;
-	height: auto;
-	padding-top: 30px;
+	padding-top: 15px;
+	padding-left: 15px;
+	background: #FEFEFE;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+	height: 300px;
 }
 
 .slider__text_line {
@@ -54,7 +53,20 @@
 	line-height: 1.5;
 	color: #141414;
 	width: 100%;
-	height: auto;
+}
+
+.slider__text_item_one {
+	max-height: 300px;
+}
+
+.slider__text_item_two {
+	max-height: 180px;
+}
+
+.slider__text_item_three {}
+
+.slider__text_item_four {
+	max-height: 200px;
 }
 
 .slider__text__content {
@@ -203,8 +215,6 @@
 	color: white;
 }
 
-
-
 .main__select_slider_one {
 	position: relative;
 	margin-left: 140px;
@@ -247,7 +257,49 @@
 	max-width: 400px;
 }
 
-.about__select_select_name_two {}
+.select__mail {
+	width: 600px;
+	display: none;
+}
+
+.select__mail_colum {}
+
+.select__mail_row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.select__mail_item {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+
+	img {
+		width: 200px;
+		height: 100px;
+	}
+}
+
+.select__mail_date {
+	font-family: 'Bold';
+	margin-right: 20px;
+	font-size: 18px;
+}
+
+.select__mail_name {
+	display: flex;
+	font-size: 18px;
+	margin-right: 20px;
+	font-family: 'Bold';
+}
+
+.select__mail_price {
+	font-size: 18px;
+}
+
+.hite_new-style {
+	width: 200px;
+}
 
 //js class
 .show-after {
@@ -258,4 +310,9 @@
 
 .hide {
 	display: none;
+}
+
+.show-select-mail {
+	display: block;
+	padding-top: 30px;
 }
