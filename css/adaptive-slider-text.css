@@ -1,0 +1,128 @@
+@media (max-width: 950px) {
+  .comment__feedback {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .feedback__answer {
+    margin-right: 15px;
+  }
+  .comment {
+    margin-left: 10px;
+    margin-top: 100px;
+  }
+  .first__comment::before {
+    top: -90px;
+    left: 0px;
+  }
+  .second__comment::before {
+    top: -100px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 920px) {
+  .slider__text__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .slider__text_item_two {
+    max-height: 100%;
+  }
+  .text__content_row-list_two {
+    text-align: center;
+  }
+  .text__content_one {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.308);
+  }
+}
+
+@media (max-width: 800px) {
+  .slider__text_buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .slider__text_item_one {
+    max-height: 100%;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 715px) {
+  .select__mail_row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .select__mail_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .select__mail_item img {
+    width: 200px;
+    height: 100px;
+  }
+  .select__mail_name {
+    display: none;
+  }
+  .select__mail_price {
+    font-size: 18px;
+    margin-right: 20px;
+  }
+  .main__select_slider_one {
+    position: relative;
+    margin-left: 0px;
+    margin: 20px auto 40px auto;
+  }
+  .main__select_slider_one::before {
+    top: -30px;
+    left: 0px;
+    font-size: 16px;
+  }
+  .main__select_slider_two {
+    position: relative;
+    margin-left: 0px;
+    margin: 0px auto;
+  }
+  .main__select_slider_two::before {
+    top: -30px;
+    left: 0px;
+    font-size: 16px;
+  }
+  .slider__text_item_four {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 550px) {
+  .slider__text_item_one {
+    line-height: 1.3;
+  }
+  .comment {
+    font-size: 14px;
+  }
+}

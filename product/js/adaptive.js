@@ -22,7 +22,8 @@ function initAdp() {
 		item.style.width = adpWidth + 'px';
 		item.style.height = `auto`
 	})
-	adpSliderLine.style.width = adpWidth * adpSliderItem.length + 'px'
+	adpSliderLine.style.width = adpWidth * adpSliderItem.length + 'px';
+
 }
 initAdp();
 
