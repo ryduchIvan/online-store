@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .slider__text_container {
   margin-top: 80px;
   margin-bottom: 100px;
@@ -36,12 +35,10 @@
 .slider__text_box {
   width: 100%;
   overflow: hidden;
-  padding-top: 15px;
-  padding-left: 15px;
+  padding: 10px;
   background: #FEFEFE;
   -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  height: 300px;
 }
 
 .slider__text_line {
@@ -57,7 +54,7 @@
   line-height: 1.5;
   color: #141414;
   width: 100%;
-  padding-right: 15px;
+  padding-right: 30px;
 }
 
 .slider__text_item_one {
@@ -66,6 +63,10 @@
 
 .slider__text_item_two {
   max-height: 180px;
+}
+
+.slider__text_item_three {
+  max-height: 100%;
 }
 
 .slider__text_item_four {
@@ -242,40 +243,10 @@
 
 .main__select_slider_one {
   position: relative;
-  margin-left: 140px;
-}
-
-.main__select_slider_one::before {
-  content: "Ваша страна:";
-  display: block;
-  position: absolute;
-  top: -1px;
-  left: -140px;
-  font-size: 18px;
-  font-family: 'SemiBold';
 }
 
 .main__select_slider_two {
   position: relative;
-  margin-left: 140px;
-}
-
-.main__select_slider_two::before {
-  content: "Ваш город:";
-  display: block;
-  position: absolute;
-  top: -1px;
-  left: -140px;
-  font-size: 18px;
-  font-family: 'SemiBold';
-}
-
-.select__box_city {
-  margin-left: 140px;
-}
-
-.select__box_country {
-  margin-left: 140px;
 }
 
 .about__select_select {
@@ -283,7 +254,7 @@
 }
 
 .select__mail {
-  width: 600px;
+  width: 500px;
   display: none;
 }
 

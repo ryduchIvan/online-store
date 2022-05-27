@@ -12,7 +12,6 @@ function popupInit() {
 	console.log(popupWidth);
 	popupItem.forEach(function (item) {
 		item.style.width = popupWidth + 'px';
-		item.style.height = `auto`;
 	})
 	popupLine.style.width = popupWidth * popupItem.length + 'px';
 }
