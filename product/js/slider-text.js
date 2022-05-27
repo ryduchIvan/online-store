@@ -19,6 +19,7 @@ function widthSliderItem() {
 	sliderTextLine.style.width = widthSliderText * sliderTextItem.length + 'px';
 }
 widthSliderItem();
+window.addEventListener(`resize`, widthSliderItem);
 console.log(sliderTextButtons.childNodes);
 sliderTextButtons.childNodes[1].addEventListener(`click`, function (event) {
 	countSliderText = 0;
@@ -28,6 +29,7 @@ sliderTextButtons.childNodes[1].addEventListener(`click`, function (event) {
 	sliderTextButtons.childNodes[7].classList.remove(`show-after`);
 	rollSliderText();
 	sliderTextBox.style.height = sliderHeightOne.offsetHeight + 'px';
+	console.log(sliderHeightOne.offsetHeight);
 })
 sliderTextButtons.childNodes[3].addEventListener(`click`, function (event) {
 	countSliderText = 1;
@@ -37,6 +39,7 @@ sliderTextButtons.childNodes[3].addEventListener(`click`, function (event) {
 	sliderTextButtons.childNodes[7].classList.remove(`show-after`);
 	rollSliderText();
 	sliderTextBox.style.height = sliderHeightTwo.offsetHeight + 'px';
+	console.log(sliderHeightTwo.offsetHeight);
 })
 sliderTextButtons.childNodes[5].addEventListener(`click`, function (event) {
 	countSliderText = 2;
