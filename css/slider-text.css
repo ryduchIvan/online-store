@@ -45,8 +45,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
 .slider__text_item {
@@ -256,6 +254,7 @@
 .select__mail {
   width: 500px;
   display: none;
+  height: 200px;
 }
 
 .select__mail_row {
@@ -305,7 +304,7 @@
 }
 
 .hite_new-style {
-  width: 200px;
+  width: 180px;
 }
 
 .show-after::after {
@@ -318,5 +317,5 @@
 
 .show-select-mail {
   display: block;
-  padding-top: 30px;
+  padding-top: 15px;
 }

@@ -23,45 +23,91 @@ function initAdp() {
 		item.style.height = `auto`
 	})
 	adpSliderLine.style.width = adpWidth * adpSliderItem.length + 'px';
-
 }
 initAdp();
-
+adpSliderItem[0].addEventListener(`click`, function (event) {
+	console.log(event.target);
+	body.classList.add(`lock-body`);
+	popup.classList.add(`open-popup`);
+	popupCount = 0;
+	rollPopup();
+})
+adpSliderItem[1].addEventListener(`click`, function (event) {
+	console.log(event.target);
+	body.classList.add(`lock-body`);
+	popup.classList.add(`open-popup`);
+	popupCount = 1;
+	rollPopup();
+})
+adpSliderItem[2].addEventListener(`click`, function (event) {
+	console.log(event.target);
+	body.classList.add(`lock-body`);
+	popup.classList.add(`open-popup`);
+	popupCount = 2;
+	rollPopup();
+})
+adpSliderItem[3].addEventListener(`click`, function (event) {
+	console.log(event.target);
+	body.classList.add(`lock-body`);
+	popup.classList.add(`open-popup`);
+	popupCount = 3;
+	rollPopup();
+})
+adpSliderItem[4].addEventListener(`click`, function (event) {
+	console.log(event.target);
+	body.classList.add(`lock-body`);
+	popup.classList.add(`open-popup`);
+	popupCount = 4;
+	rollPopup();
+})
 adpButtons.forEach(function (item) {
 	console.log(item.childNodes[1]);
 	console.log(item.childNodes[3]);
 	console.log(item.childNodes[5]);
 	console.log(item.childNodes[7]);
 	item.childNodes[1].addEventListener(`click`, function () {
-		item.childNodes[1].classList.toggle(`new-style-button`);
+		item.childNodes[1].classList.add(`new-style-button`);
 		item.childNodes[3].classList.remove(`new-style-button`);
 		item.childNodes[5].classList.remove(`new-style-button`);
 		item.childNodes[7].classList.remove(`new-style-button`);
+		item.childNodes[9].classList.remove(`new-style-button`);
 		adpCount = 0;
 		adpTranform();
 	})
 	item.childNodes[3].addEventListener(`click`, function () {
-		item.childNodes[3].classList.toggle(`new-style-button`);
+		item.childNodes[3].classList.add(`new-style-button`);
 		item.childNodes[1].classList.remove(`new-style-button`);
 		item.childNodes[5].classList.remove(`new-style-button`);
 		item.childNodes[7].classList.remove(`new-style-button`);
+		item.childNodes[9].classList.remove(`new-style-button`);
 		adpCount = 1;
 		adpTranform();
 	})
 	item.childNodes[5].addEventListener(`click`, function () {
-		item.childNodes[5].classList.toggle(`new-style-button`);
+		item.childNodes[5].classList.add(`new-style-button`);
 		item.childNodes[3].classList.remove(`new-style-button`);
 		item.childNodes[1].classList.remove(`new-style-button`);
 		item.childNodes[7].classList.remove(`new-style-button`);
+		item.childNodes[9].classList.remove(`new-style-button`);
 		adpCount = 2;
 		adpTranform();
 	})
 	item.childNodes[7].addEventListener(`click`, function () {
-		item.childNodes[7].classList.toggle(`new-style-button`);
+		item.childNodes[7].classList.add(`new-style-button`);
 		item.childNodes[3].classList.remove(`new-style-button`);
 		item.childNodes[5].classList.remove(`new-style-button`);
 		item.childNodes[1].classList.remove(`new-style-button`);
+		item.childNodes[9].classList.remove(`new-style-button`);
 		adpCount = 3;
+		adpTranform();
+	})
+	item.childNodes[9].addEventListener(`click`, function () {
+		item.childNodes[9].classList.add(`new-style-button`);
+		item.childNodes[3].classList.remove(`new-style-button`);
+		item.childNodes[5].classList.remove(`new-style-button`);
+		item.childNodes[1].classList.remove(`new-style-button`);
+		item.childNodes[7].classList.remove(`new-style-button`);
+		adpCount = 4;
 		adpTranform();
 	})
 })

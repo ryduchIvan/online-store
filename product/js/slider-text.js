@@ -70,21 +70,3 @@ function rollSliderText() {
 	sliderTextLine.style.transform = 'translate(-' + countSliderText * widthSliderText + 'px)';
 }
 
-//height
-//sliderTextBox.style.height = sliderHeightOne.offsetHeight + 'px';
-//console.log(sliderHeightOne.offsetHeight);
-//sliderTextBox.style.height = sliderHeightTwo.offsetHeight + 'px';
-//console.log(sliderHeightTwo.offsetHeight);
-//sliderTextBox.style.height = sliderHeightThree.offsetHeight + 'px';
-//console.log(sliderHeightThree.offsetHeight);
-//sliderTextBox.style.height = sliderHeightFour.offsetHeight + 'px';
-//console.log(sliderHeightFour.offsetHeight);
-//let heightSliderText;
-//const sliderTextContainer = document.querySelector(`.slider__text_container`);
-//function height() {
-//	sliderTextItem.forEach(function (elem) {
-//		heightSliderText = elem.offsetHeight;
-//		console.log(heightSliderText);
-//	})
-//	sliderTextBox.style.height = heightSliderText + 'px';
-//}

@@ -43,7 +43,6 @@
 
 .slider__text_line {
 	display: flex;
-	transition: all 0.3s ease;
 }
 
 .slider__text_item {
@@ -235,6 +234,7 @@
 .select__mail {
 	width: 500px;
 	display: none;
+	height: 200px;
 }
 
 .select__mail_colum {}
@@ -273,7 +273,7 @@
 }
 
 .hite_new-style {
-	width: 200px;
+	width: 180px;
 }
 
 //js class
@@ -289,5 +289,5 @@
 
 .show-select-mail {
 	display: block;
-	padding-top: 30px;
+	padding-top: 15px;
 }
