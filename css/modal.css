@@ -6,6 +6,8 @@
   top: 0px;
   left: 0px;
   z-index: 5;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .modal__container {
@@ -26,7 +28,7 @@
   background-color: #ECF1F2;
   padding: 20px;
   border-radius: 5px;
-  width: 60%;
+  width: 40%;
 }
 
 .order__modal_top {
@@ -68,8 +70,108 @@
   width: 200px;
 }
 
+.order__modal_products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.order__modal_products img {
+  width: 15px;
+  height: 15px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-left: 10px;
+}
+
 .order__label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.order__input {
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.319);
+  border-radius: 3px;
+  width: 50%;
+}
+
+.order__button {
+  border: none;
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 6px;
+  font-size: 20px;
+}
+
+.order__modal__list {
+  display: none;
+}
+
+.show-order-product {
+  display: block;
+}
+
+.order__modal_products.show-order-product img {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.order__modal_item img {
+  width: 120px;
+  height: 80px;
+  border-radius: 3px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.order__modal_product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.order__modal_text {
+  margin-left: 15px;
+  margin-top: 0px;
+  margin-bottom: auto;
+}
+
+.order__modal_text span {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.order__modal__delete {
+  border: none;
+  background-color: #ECF1F2;
+  color: rgba(0, 0, 0, 0.712);
+  margin-right: 0px;
+  margin-left: auto;
+  margin-top: 0px;
+  margin-bottom: auto;
+}
+
+.show-modal {
+  visibility: visible;
+  opacity: 1;
+}
+
+.rotate-arrow-order {
+  -webkit-transform: rotate(190deg);
+          transform: rotate(190deg);
 }

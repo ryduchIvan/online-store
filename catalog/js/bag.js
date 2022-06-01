@@ -97,3 +97,36 @@ bagProductList.addEventListener(`click`, function (event) {
 		deleteItem(event.target.closest(`.bag__content_item`))
 	}
 })
+
+//Оформление заказа
+
+const buttonOrder = document.querySelector(`.bag__product_btn`);
+const modal = document.querySelector(`.modal`);
+//open modal
+buttonOrder.addEventListener(`click`, function () {
+	modal.classList.toggle(`show-modal`);
+})
+//close modal
+modal.addEventListener(`click`, function (event) {
+	console.log(event.target.classList)
+	if (event.target.classList.contains(`order__modal`)) {
+		modal.classList.remove(`show-modal`);
+	}
+})
+
+const orderModalOpenProd = document.querySelector(`.order__modal_products`);
+const orderModalList = document.querySelector(`.order__modal__list`);
+const arrowOrder = document.querySelector(`.arrow_order`);
+let flag = 0;
+orderModalOpenProd.addEventListener(`click`, function (e) {
+	if (flag == 0) {
+		orderModalList.classList.toggle(`show-order-product`);
+		arrowOrder.classList.toggle(`rotate-arrow-order`);
+		flag == 1;
+	} else {
+		orderModalList.classList.remove(`show-order-product`);
+		flag == 0;
+	}
+})
+
+
