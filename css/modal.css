@@ -114,6 +114,8 @@
 
 .order__modal__list {
   display: none;
+  overflow: auto;
+  max-height: 300px;
 }
 
 .show-order-product {
@@ -123,6 +125,12 @@
 .order__modal_products.show-order-product img {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+}
+
+.order__modal_item {
+  border: 1px solid rgba(0, 0, 0, 0.313);
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .order__modal_item img {
@@ -169,9 +177,4 @@
 .show-modal {
   visibility: visible;
   opacity: 1;
-}
-
-.rotate-arrow-order {
-  -webkit-transform: rotate(190deg);
-          transform: rotate(190deg);
 }

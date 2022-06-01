@@ -111,6 +111,8 @@
 
 .order__modal__list {
 	display: none;
+	overflow: auto;
+	max-height: 300px;
 }
 
 .show-order-product {
@@ -124,6 +126,10 @@
 }
 
 .order__modal_item {
+	border: 1px solid rgba(0, 0, 0, 0.313);
+	padding: 10px;
+	margin-bottom: 20px;
+
 	img {
 		width: 120px;
 		height: 80px;
@@ -169,8 +175,4 @@
 .show-modal {
 	visibility: visible;
 	opacity: 1;
-}
-
-.rotate-arrow-order {
-	transform: rotate(190deg);
 }
