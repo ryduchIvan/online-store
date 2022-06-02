@@ -108,7 +108,7 @@ const generateModalProduct = function (id, img, title, price) {
 			<h3 class="order__modal_title">
 			${title}
 			</h3>
-			<span class="order__modal_price">${normalPrice(price)} </span>
+			<span class="order__modal_price">${normalPrice(price)}</span>
 		</div>
 		<button class="order__modal__delete">Удалить</button>
 	</article>
@@ -117,27 +117,39 @@ const generateModalProduct = function (id, img, title, price) {
 }
 
 
-
+let priceModal = 0;
 const buttonOrder = document.querySelector(`.bag__product_btn`);
 const modal = document.querySelector(`.modal`);
-
+const orderModalOpenProd = document.querySelector(`.order__modal_products`);
+const orderModalList = document.querySelector(`.order__modal__list`);
+const arrowOrder = document.querySelector(`.arrow_order`);
+const plusModalPrice = function (price) {
+	priceModal += price;
+}
 const printFullPriceModal = function () {
-	document.querySelector(`.order__modal_summ span`).textContent = `${normalPrice(priceBag)} ₴`;
+	fullPriceModal.textContent = normalPrice(priceModal) + ` ₴`;
+}
+//let array = bagProductList.children;
+//let fullprice = fullpirce.textContent;
+//let length = array.length;
+//document.querySelector(`.order__modal_quantity span`).textContent = `${length} шт`;
+const changeModalQuantity = function () {
+	let length = orderModalList.children.length;
+	document.querySelector(`.order__modal_quantity span`).textContent = length + ` шт`;
 }
 //open modal
 buttonOrder.addEventListener(`click`, function () {
 	modal.classList.toggle(`show-modal`);
 	let array = bagProductList.children;
-	let fullprice = fullpirce.textContent;
-	let length = array.length;
-	document.querySelector(`.order__modal_quantity span`).textContent = `${length} шт`;
 	for (item of array) {
 		let id = item.querySelector(`.bag__content_product`).dataset.id;
 		let title = item.querySelector(`.bag__product_title`).textContent;
 		let img = item.querySelector(`.bag__product_img`).getAttribute(`src`);
-		let price = item.querySelector(`.bag__product_price`).textContent;
+		let price = parseInt(priceWithoutSpaces(item.querySelector(`.bag__product_price`).textContent));
 		orderModalList.insertAdjacentHTML(`afterbegin`, generateModalProduct(id, img, title, price));
+		plusModalPrice(price);
 		printFullPriceModal();
+		changeModalQuantity();
 		//let obj = {};
 		//obj.title = title;
 		//obj.price = price;
@@ -157,9 +169,7 @@ modal.addEventListener(`click`, function (event) {
 	}
 })
 
-const orderModalOpenProd = document.querySelector(`.order__modal_products`);
-const orderModalList = document.querySelector(`.order__modal__list`);
-const arrowOrder = document.querySelector(`.arrow_order`);
+
 let flag = 0;
 orderModalOpenProd.addEventListener(`click`, function (e) {
 	if (flag == 0) {
@@ -171,15 +181,29 @@ orderModalOpenProd.addEventListener(`click`, function (e) {
 		flag == 0;
 	}
 })
+
+let fullPriceModal = document.querySelector(`.order__modal_summ span`);
 const minusModalProduct = function (price) {
-	priceBag -= price;
+	priceModal -= price
 }
+
 const deleteModalProduct = function (a) {
+	let idPoruduct = a.querySelector(`.order__modal_product`).dataset.id;
+	document.querySelector(`.catalog__item[data-id = "${idPoruduct}"]`).querySelector(`.in_the_bag`).disabled = false;
+	console.log(idPoruduct);
 	a.remove();
-	minusModalProduct();
-	let array = bagProductList.children;
-	let length = array.length;
-	document.querySelector(`.order__modal_quantity span`).textContent = `${length} шт`;
+	let price = parseInt(priceWithoutSpaces(a.querySelector(`.order__modal_price`).textContent));
+	minusModalProduct(price);
+	printFullPriceModal();
+	changeModalQuantity();
+
+	//let idPoruduct = a.querySelector(`.bag__content_product`).dataset.id;
+	//document.querySelector(`.catalog__item[data-id = "${idPoruduct}"]`).querySelector(`.in_the_bag`).disabled = false;
+	let priceBag = parseInt(priceWithoutSpaces(document.querySelector(`.bag__content_product`).querySelector(`.bag__product_price`).textContent));
+	bagMinus(priceBag);
+	printFullPrice();
+	document.querySelector(`.bag__content_item`).remove();
+	changeQuantity();
 }
 
 orderModalList.addEventListener(`click`, function (event) {
