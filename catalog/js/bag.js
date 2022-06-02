@@ -119,7 +119,7 @@ const generateModalProduct = function (id, img, title, price) {
 	<article class="order__modal_product" data-id ="${id}">
 		<img src="${img}" alt="">
 		<div class="order__modal_text">
-			<h3 class="order__modal_title">
+			<h3 class="order__modal_title order__modal_title_knife">
 			${title}
 			</h3>
 			<span class="order__modal_price">${normalPrice(price)}</span>
@@ -154,7 +154,7 @@ const changeModalQuantity = function () {
 //open modal
 buttonOrder.addEventListener(`click`, function () {
 	modal.classList.toggle(`show-modal`);
-	let array = bagProductList.children;
+	let array = bagProductListSolo.children;
 	for (item of array) {
 		let id = item.querySelector(`.bag__content_product`).dataset.id;
 		let title = item.querySelector(`.bag__product_title`).textContent;

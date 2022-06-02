@@ -26,7 +26,9 @@
     display: none;
   }
   .bag__content_list_mobile {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -57,5 +59,63 @@
 @media (max-width: 500px) {
   .bag__content {
     width: 250px;
+  }
+}
+
+@media (max-width: 1340px) {
+  .order__label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 1113px) {
+  .order__label {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .order__input {
+    margin-top: 10px;
+    width: 70%;
+  }
+  .order__modal_content {
+    width: 60%;
+  }
+}
+
+@media (max-width: 758px) {
+  .order__modal_content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 481px) {
+  .order__modal_top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .order__modal_info-item {
+    font-size: 16px;
+  }
+  .order__modal_title_knife {
+    font-size: 14px;
+  }
+  .order__modal__delete {
+    border: none;
+    background-color: #ECF1F2;
+    color: rgba(0, 0, 0, 0.712);
+    margin-right: 0px;
+    margin-left: auto;
+    margin-top: 0px;
+    margin-bottom: auto;
+    font-size: 12px;
   }
 }

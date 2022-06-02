@@ -54,6 +54,9 @@
   margin-bottom: 20px;
   font-size: 20px;
   font-family: 'Semibold';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .order__modal_info-item span {
