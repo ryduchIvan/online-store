@@ -1,7 +1,7 @@
 const buttonBag = document.querySelectorAll(`.in_the_bag`);
-const bagProductList = document.querySelector(`.bag__content_list`);
-const bagQuantity = document.querySelector(`.bag_quanity`);
-const fullpirce = document.querySelector(`.fullprice`);
+const bagProductList = document.querySelectorAll(`.bag__content_list`);
+const bagQuantity = document.querySelectorAll(`.bag_quanity`);
+const fullpirce = document.querySelectorAll(`.fullprice`);
 const bagText = document.querySelector(`.bag__tex`);
 let priceBag = 0;
 let productArray = [];
@@ -52,11 +52,16 @@ const bagMinus = function (price) {
 	priceBag -= price;
 }
 const printFullPrice = function () {
-	fullpirce.textContent = `${normalPrice(priceBag)} ₴`;
+	fullpirce.forEach(function (elem) {
+		elem.textContent = `${normalPrice(priceBag)} ₴`
+	});
 }
+const bagProductListSolo = document.querySelector(`.bag__content_list`);
 const changeQuantity = function () {
-	let length = bagProductList.children.length;
-	bagQuantity.textContent = length;
+	let length = bagProductListSolo.children.length;
+	bagQuantity.forEach(function (elem) {
+		elem.textContent = length;
+	})
 	if (length > 0) {
 		bagText.classList.add(`active`);
 	} else {
@@ -74,7 +79,9 @@ buttonBag.forEach(function (elem) {
 		let title = parent.querySelector(`.knife__title`).textContent;
 		let price = parseInt(priceWithoutSpaces(parent.querySelector(`.knife__price`).textContent));
 
-		bagProductList.insertAdjacentHTML(`afterbegin`, generateCartProduct(id, img, title, price));
+		bagProductList.forEach(function (elem) {
+			elem.insertAdjacentHTML(`afterbegin`, generateCartProduct(id, img, title, price));
+		})
 		bagSum(price);
 		printFullPrice();
 		changeQuantity();
@@ -92,12 +99,19 @@ const deleteItem = function (a) {
 	changeQuantity();
 }
 
-bagProductList.addEventListener(`click`, function (event) {
-	if (event.target.classList.contains(`bag__product_delete`)) {
-		deleteItem(event.target.closest(`.bag__content_item`))
-	}
+//bagProductList.forEach(addEventListener(`click`, function (event) {
+//	if (event.target.classList.contains(`bag__product_delete`)) {
+//		deleteItem(event.target.closest(`.bag__content_item`))
+//	}
+//})
+//)
+bagProductList.forEach(function (elem) {
+	elem.addEventListener(`click`, function (event) {
+		if (event.target.classList.contains(`bag__product_delete`)) {
+			deleteItem(event.target.closest(`.bag__content_item`))
+		}
+	})
 })
-
 //Оформление заказа
 const generateModalProduct = function (id, img, title, price) {
 	return `
