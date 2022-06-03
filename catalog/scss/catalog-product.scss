@@ -14,16 +14,17 @@
 	//grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
 	//grid-template-rows: repeat(auto-fit, 400px);
 	width: 100%;
+	margin-left: 50px;
+	justify-content: space-between;
 }
 
 .catalog__item {
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 	padding: 20px;
-	margin: 0px 0px 0px auto;
+	margin: 0px 0px 0px 0px;
 	flex: 0 1 32%;
+	max-height: 400px;
 }
-
-
 
 .catalog__img {
 	width: 250px;
