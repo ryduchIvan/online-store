@@ -108,7 +108,7 @@ const deleteItem = function (a) {
 bagProductList.forEach(function (elem) {
 	elem.addEventListener(`click`, function (event) {
 		if (event.target.classList.contains(`bag__product_delete`)) {
-			deleteItem(event.target.closest(`.bag__content_item`))
+			deleteItem(event.target.closest(`.bag__content_item`));
 		}
 	})
 })
@@ -132,7 +132,7 @@ const generateModalProduct = function (id, img, title, price) {
 
 
 let priceModal = 0;
-const buttonOrder = document.querySelector(`.bag__product_btn`);
+const buttonOrder = document.querySelectorAll(`.bag__product_btn`);
 const modal = document.querySelector(`.modal`);
 const orderModalOpenProd = document.querySelector(`.order__modal_products`);
 const orderModalList = document.querySelector(`.order__modal__list`);
@@ -152,24 +152,26 @@ const changeModalQuantity = function () {
 	document.querySelector(`.order__modal_quantity span`).textContent = length + ` шт`;
 }
 //open modal
-buttonOrder.addEventListener(`click`, function () {
-	modal.classList.toggle(`show-modal`);
-	let array = bagProductListSolo.children;
-	for (item of array) {
-		let id = item.querySelector(`.bag__content_product`).dataset.id;
-		let title = item.querySelector(`.bag__product_title`).textContent;
-		let img = item.querySelector(`.bag__product_img`).getAttribute(`src`);
-		let price = parseInt(priceWithoutSpaces(item.querySelector(`.bag__product_price`).textContent));
-		orderModalList.insertAdjacentHTML(`afterbegin`, generateModalProduct(id, img, title, price));
-		plusModalPrice(price);
-		printFullPriceModal();
-		changeModalQuantity();
-		//let obj = {};
-		//obj.title = title;
-		//obj.price = price;
-		//productArray.push(obj);
-	}
-	//console.log(productArray);
+buttonOrder.forEach(function (elem) {
+	elem.addEventListener(`click`, function () {
+		modal.classList.toggle(`show-modal`);
+		let array = bagProductListSolo.children;
+		for (item of array) {
+			let id = item.querySelector(`.bag__content_product`).dataset.id;
+			let title = item.querySelector(`.bag__product_title`).textContent;
+			let img = item.querySelector(`.bag__product_img`).getAttribute(`src`);
+			let price = parseInt(priceWithoutSpaces(item.querySelector(`.bag__product_price`).textContent));
+			orderModalList.insertAdjacentHTML(`afterbegin`, generateModalProduct(id, img, title, price));
+			plusModalPrice(price);
+			printFullPriceModal();
+			changeModalQuantity();
+			//let obj = {};
+			//obj.title = title;
+			//obj.price = price;
+			//productArray.push(obj);
+		}
+		//console.log(productArray);
+	})
 })
 
 //delete product
@@ -216,7 +218,11 @@ const deleteModalProduct = function (a) {
 	let priceBag = parseInt(priceWithoutSpaces(document.querySelector(`.bag__content_product`).querySelector(`.bag__product_price`).textContent));
 	bagMinus(priceBag);
 	printFullPrice();
-	document.querySelector(`.bag__content_item`).remove();
+	const bagContentItems = document.querySelectorAll(`.bag__content_item`);
+	bagContentItems.forEach(function (elem) {
+		console.log(elem);
+	})
+	//document.querySelector(`.bag__content_item`).remove();
 	changeQuantity();
 }
 

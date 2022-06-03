@@ -2,6 +2,11 @@
   .bag__content_list_mobile {
     display: none;
   }
+  .bag__content_list_desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media (max-width: 1190px) {
