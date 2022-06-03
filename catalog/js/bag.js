@@ -2,7 +2,7 @@ const buttonBag = document.querySelectorAll(`.in_the_bag`);
 const bagProductList = document.querySelectorAll(`.bag__content_list`);
 const bagQuantity = document.querySelectorAll(`.bag_quanity`);
 const fullpirce = document.querySelectorAll(`.fullprice`);
-const bagText = document.querySelector(`.bag__tex`);
+const bagText = document.querySelectorAll(`.bag__tex`);
 let priceBag = 0;
 let productArray = [];
 const randomId = () => {
@@ -63,9 +63,13 @@ const changeQuantity = function () {
 		elem.textContent = length;
 	})
 	if (length > 0) {
-		bagText.classList.add(`active`);
+		bagText.forEach(function (elem) {
+			elem.classList.add(`active`);
+		})
 	} else {
-		bagText.classList.remove(`active`);
+		bagText.forEach(function (elem) {
+			elem.classList.remove(`active`);
+		})
 	}
 }
 
@@ -204,9 +208,9 @@ const minusModalProduct = function (price) {
 }
 
 const deleteModalProduct = function (a) {
-	let idPoruduct = a.querySelector(`.order__modal_product`).dataset.id;
-	document.querySelector(`.catalog__item[data-id = "${idPoruduct}"]`).querySelector(`.in_the_bag`).disabled = false;
-	console.log(idPoruduct);
+	//let idPoruduct = a.querySelector(`.order__modal_product`).dataset.id;
+	//document.querySelector(`.catalog__item[data-id = "${idPoruduct}"]`).querySelector(`.in_the_bag`).disabled = false;
+	//console.log(idPoruduct);
 	a.remove();
 	let price = parseInt(priceWithoutSpaces(a.querySelector(`.order__modal_price`).textContent));
 	minusModalProduct(price);
@@ -215,15 +219,15 @@ const deleteModalProduct = function (a) {
 
 	//let idPoruduct = a.querySelector(`.bag__content_product`).dataset.id;
 	//document.querySelector(`.catalog__item[data-id = "${idPoruduct}"]`).querySelector(`.in_the_bag`).disabled = false;
-	let priceBag = parseInt(priceWithoutSpaces(document.querySelector(`.bag__content_product`).querySelector(`.bag__product_price`).textContent));
-	bagMinus(priceBag);
-	printFullPrice();
-	const bagContentItems = document.querySelectorAll(`.bag__content_item`);
-	bagContentItems.forEach(function (elem) {
-		console.log(elem);
-	})
-	//document.querySelector(`.bag__content_item`).remove();
-	changeQuantity();
+	//let priceBag = parseInt(priceWithoutSpaces(document.querySelector(`.bag__content_product`).querySelector(`.bag__product_price`).textContent));
+	//bagMinus(priceBag);
+	//printFullPrice();
+	//const bagContentItems = document.querySelectorAll(`.bag__content_item`);
+	//bagContentItems.forEach(function (elem) {
+	//	console.log(elem);
+	//})
+	////document.querySelector(`.bag__content_item`).remove();
+	//changeQuantity();
 }
 
 orderModalList.addEventListener(`click`, function (event) {
