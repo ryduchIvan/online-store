@@ -236,6 +236,66 @@ orderModalList.addEventListener(`click`, function (event) {
 	};
 })
 
+const emailInput = document.querySelector(`.order__input_email`);
+const phoneInput = document.querySelector(`.order__input_phone`);
+const submitOrder = document.querySelector(`.order__button`);
+const mainForm = document.querySelector(`.order__modal_form`);
+const nameInput = document.querySelector(`.order__input_name`);
+const phonePlaceholder = phoneInput.placeholder;
+const emailPlaceholder = emailInput.placeholder;
+let regPhone = /^[\d\+][\d\(\)\ -]{4,14}\d$/;
+let regName = /[A-Za-zA-Яа-яЁё]/;
+
+
+mainForm.addEventListener(`submit`, function (event) {
+	if (emailTest(emailInput)) {
+		emailInput.placeholder = "Введите email"
+		emailInput.value = "";
+		emailInput.classList.add(`change-border`);
+		event.preventDefault();
+	}
+});
+mainForm.addEventListener(`submit`, function (event) {
+	if (!regPhone.test(phoneInput.value)) {
+		phoneInput.placeholder = "Введите номер телефона"
+		phoneInput.value = "";
+		phoneInput.classList.add(`change-border`);
+		event.preventDefault();
+	}
+});
+mainForm.addEventListener(`submit`, function (event) {
+	if ((!regName.test(nameInput.value))) {
+		nameInput.placeholder = "Введите ФИО";
+		nameInput.value = "";
+		nameInput.classList.add(`change-border`);
+		event.preventDefault();
+	}
+})
+emailInput.addEventListener(`focus`, function (event) {
+	emailInput.placeholder = "";
+})
+
+phoneInput.addEventListener(`focus`, function (event) {
+	phoneInput.placeholder = "";
+})
+
+nameInput.addEventListener(`focus`, function (event) {
+	nameInput.placeholder = "";
+	nameInput.classList.remove(`change-border`);
+})
+phoneInput.addEventListener(`blur`, function () {
+	phoneInput.placeholder = phonePlaceholder;
+	phoneInput.classList.remove(`change-border`);
+})
+emailInput.addEventListener(`blur`, function () {
+	emailInput.placeholder = emailPlaceholder;
+	emailInput.classList.remove(`change-border`);
+})
+
+
+function emailTest(input) {
+	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+}
 
 
 

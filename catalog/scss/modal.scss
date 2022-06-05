@@ -26,7 +26,7 @@
 	background-color: #ECF1F2;
 	padding: 20px;
 	border-radius: 5px;
-	width: 40%;
+	width: 50%;
 }
 
 .order__modal_top {
@@ -78,7 +78,6 @@
 	img {
 		width: 15px;
 		height: 15px;
-		transform: rotate(90deg);
 		margin-left: 10px;
 	}
 }
@@ -120,11 +119,11 @@
 	display: block;
 }
 
-.order__modal_products.show-order-product {
-	img {
-		transform: rotate(0deg);
-	}
+.order__modal_products {
+	max-width: 200px;
+	cursor: pointer;
 }
+
 
 .order__modal_item {
 	border: 1px solid rgba(0, 0, 0, 0.313);
@@ -136,7 +135,6 @@
 		width: 120px;
 		height: 80px;
 		border-radius: 3px;
-		transform: rotate(0deg);
 		display: block;
 		object-fit: cover;
 	}
@@ -173,8 +171,32 @@
 	margin-bottom: auto;
 }
 
+.arrow_order {
+	transform: rotate(90deg);
+	transition: all 0.3s ease;
+}
+
 //js 
 .show-modal {
 	visibility: visible;
 	opacity: 1;
+}
+
+.rotate-arrow-order {
+	transform: rotate(-90deg);
+	transition: all 0.3s ease;
+}
+
+
+.main__form_error {
+	color: darkred;
+	font-family: "Bold";
+}
+
+.change-border {
+	border: 1px solid darkred;
+
+	&::placeholder {
+		color: rgb(189, 63, 63);
+	}
 }

@@ -125,7 +125,7 @@ body {
   border-radius: 5px;
   border: 1px solid #0404046e;
   height: 35px;
-  background: url(../img/logo-header/lypa.svg) no-repeat;
+  background: url(../../main/img/logo-header/lypa.svg) no-repeat center;
   background-position: 5% 50%;
 }
 
