@@ -34,6 +34,7 @@
       -ms-flex: 0 1 32%;
           flex: 0 1 32%;
   max-height: 400px;
+  margin-bottom: 20px;
 }
 
 .catalog__img {

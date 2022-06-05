@@ -1,8 +1,8 @@
-const searchInput = document.querySelector(`.white__input`)
+const searchInput = document.querySelector(`.white__input`);
 
 searchInput.oninput = function () {
 	let val = this.value.trim().toUpperCase();
-	let catalogItemsTitle = document.querySelectorAll(`.knife__title`);
+	const catalogItemsTitle = document.querySelectorAll(`.knife__title`);
 	if (val != "") {
 		catalogItemsTitle.forEach(function (elem) {
 			if (elem.innerText.toUpperCase().search(val) == -1) {
@@ -10,27 +10,20 @@ searchInput.oninput = function () {
 				elem.innerHTML = elem.innerText;
 			} else {
 				elem.closest(`.catalog__item`).classList.remove(`hide`);
-				let str = elem.closest(`.catalog__item`).innerText;
-				elem.innerHTML = insertMark(str, elem.innerText.toUpperCase().search(val), val.lenght);
+				let str = elem.innerText;
+				let position = elem.innerText.toUpperCase().search(val);
+				let length = val.length;
+				elem.innerHTML = insertMark(str, position, val.length);
 			}
-		});
-	}
-	else {
-		catalogItemsTitle.forEach(function (elem) {
-			elem.closest(`.catalog__item`).classList.remove(`hide`);
-			elem.innerHTML = elem.innerText;
 		})
 	}
 }
 
-function insertMark(str, pos, len) {
-	return str.slice(0, pos) + `<mark>` + str.slice(pos, pos + len) + `</mark>` + str.slice(pos + len);
-}
+let searchPlaceholder = searchInput.placeholder;
 
-const inputPlaceholder = searchInput.placeholder;
-searchInput.addEventListener(`focus`, function (e) {
+searchInput.addEventListener(`focus`, function () {
 	searchInput.placeholder = ""
-})
-searchInput.addEventListener(`blur`, function (e) {
-	searchInput.placeholder = inputPlaceholder;
-})
+});
+searchInput.addEventListener(`blur`, function () {
+	searchInput.placeholder = searchPlaceholder;
+});
