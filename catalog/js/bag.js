@@ -235,7 +235,7 @@ orderModalList.addEventListener(`click`, function (event) {
 		deleteModalProduct(event.target.closest(`.order__modal_item`));
 	};
 })
-
+//Работа с валидацией
 const emailInput = document.querySelector(`.order__input_email`);
 const phoneInput = document.querySelector(`.order__input_phone`);
 const submitOrder = document.querySelector(`.order__button`);
@@ -271,25 +271,29 @@ mainForm.addEventListener(`submit`, function (event) {
 		event.preventDefault();
 	}
 })
+//поведение инпутов при фокусе 
 emailInput.addEventListener(`focus`, function (event) {
-	emailInput.placeholder = "";
+	this.placeholder = "";
 })
 
 phoneInput.addEventListener(`focus`, function (event) {
-	phoneInput.placeholder = "";
+	this.placeholder = "";
 })
 
 nameInput.addEventListener(`focus`, function (event) {
-	nameInput.placeholder = "";
-	nameInput.classList.remove(`change-border`);
+	this.placeholder = "";
 })
+//поведение инпутов при блюре
 phoneInput.addEventListener(`blur`, function () {
-	phoneInput.placeholder = phonePlaceholder;
-	phoneInput.classList.remove(`change-border`);
+	this.placeholder = phonePlaceholder;
+	this.classList.remove(`change-border`);
 })
 emailInput.addEventListener(`blur`, function () {
-	emailInput.placeholder = emailPlaceholder;
-	emailInput.classList.remove(`change-border`);
+	this.placeholder = emailPlaceholder;
+	this.classList.remove(`change-border`);
+})
+nameInput.addEventListener(`blur`, function () {
+	this.classList.remove(`change-border`);
 })
 
 
